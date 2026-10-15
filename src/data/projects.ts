@@ -1,9 +1,5 @@
 import { Project } from '../types.ts';
 
-export const getGoogleFaviconUrl = (domain: string, size: number = 64): string => {
-  return `https://www.google.com/s2/favicons?domain=${domain}&sz=${size}`;
-};
-
 export const PROJECTS_DATA: Project[] = [
   {
     id: 'scan-pos',
@@ -21,7 +17,8 @@ export const PROJECTS_DATA: Project[] = [
       'Gestión de catálogo de productos e inventario',
       'Cálculo de cobro y registro de transacciones locales'
     ],
-    version: 'En línea'
+    version: 'En línea',
+    faviconUrl: 'https://scan-pos.pages.dev/favicon.svg'
   },
   {
     id: 'flickwallet',
@@ -39,7 +36,8 @@ export const PROJECTS_DATA: Project[] = [
       'Historial de movimientos con estados de transacción',
       'Interfaz modular para gestión de cuentas'
     ],
-    version: 'En línea'
+    version: 'En línea',
+    faviconUrl: 'https://flickwallet.pages.dev/apple-touch-icon.png'
   },
   {
     id: 'cotizador-express',
@@ -57,7 +55,8 @@ export const PROJECTS_DATA: Project[] = [
       'Generación de presupuestos listos para imprimir o compartir',
       'Despliegue estático rápido y accesible'
     ],
-    version: 'En línea'
+    version: 'En línea',
+    faviconUrl: 'https://cotizador-expres.pages.dev/favicon.png'
   },
   {
     id: 'codewave-ai',
@@ -75,6 +74,7 @@ export const PROJECTS_DATA: Project[] = [
       'Conexión directa con la API de Gemini',
       'Procesamiento interactivo de texto y respuestas en tiempo real'
     ],
-    version: 'En línea'
+    version: 'En línea',
+    faviconUrl: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%23050505'/%3E%3Cdefs%3E%3ClinearGradient id='cwg' x1='6' y1='10' x2='34' y2='30' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0%25' stop-color='%2300f0ff'/%3E%3Cstop offset='45%25' stop-color='%2300e5ff'/%3E%3Cstop offset='75%25' stop-color='%2300f5c4'/%3E%3Cstop offset='100%25' stop-color='%2334d399'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M15 11L7 20L15 29' stroke='url(%23cwg)' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3Cpath d='M25 11L33 20L25 29' stroke='url(%23cwg)' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E"
   }
 ];

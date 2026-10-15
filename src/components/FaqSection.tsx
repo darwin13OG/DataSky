@@ -55,7 +55,7 @@ export const FaqSection: React.FC = () => {
               {isOpen && (
                 <div
                   id={`faq-answer-${faq.id}`}
-                  className="px-4 sm:px-5 pb-5 pt-1 text-xs sm:text-sm text-oliva/75 dark:text-almendra/75 leading-relaxed border-t border-oliva/5 dark:border-oliva-border/30 font-sans"
+                  className="px-4 sm:px-5 pb-5 pt-1 text-xs sm:text-sm text-oliva/90 dark:text-almendra/85 leading-relaxed border-t border-oliva/5 dark:border-oliva-border/30 font-sans"
                 >
                   {faq.answer}
                 </div>

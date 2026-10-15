@@ -17,12 +17,13 @@
   --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
 }
 
-/* Retícula técnica de fondo */
+/* Retícula técnica de fondo optimizada para 120fps */
 .bg-grid-light {
   background-size: 32px 32px;
   background-image: 
     linear-gradient(to right, rgba(58, 64, 59, 0.05) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(58, 64, 59, 0.05) 1px, transparent 1px);
+  contain: strict;
 }
 
 .bg-grid-dark {
@@ -30,13 +31,14 @@
   background-image: 
     linear-gradient(to right, rgba(163, 177, 155, 0.06) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(163, 177, 155, 0.06) 1px, transparent 1px);
+  contain: strict;
 }
 
-/* Animaciones suaves hacia arriba / flotación */
+/* Animaciones suaves hacia arriba / flotación lenta */
 @keyframes floatUp {
   0% {
     opacity: 0;
-    transform: translateY(28px);
+    transform: translateY(44px);
   }
   100% {
     opacity: 1;
@@ -49,28 +51,37 @@
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-6px);
+    transform: translateY(-5px);
   }
 }
 
 .animate-float-up {
-  animation: floatUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: floatUp 1.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .animate-gentle-float {
   animation: gentleFloat 4s ease-in-out infinite;
 }
 
-/* Subtle glow utility */
-.glow-salvia {
-  box-shadow: 0 0 25px -5px rgba(163, 177, 155, 0.25);
-}
-
 html {
   scroll-behavior: smooth;
-  overscroll-behavior-y: contain;
+  overflow-y: auto;
 }
 
 body {
   overflow-x: hidden;
+  overflow-y: visible;
+  min-height: 100%;
+}
+
+/* Ocultar barra lateral de scroll en navegadores compatibles */
+::-webkit-scrollbar {
+  display: none;
+  width: 0px;
+  height: 0px;
+}
+
+html, body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

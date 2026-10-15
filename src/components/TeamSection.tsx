@@ -19,7 +19,7 @@ export const TeamSection: React.FC = () => {
         {ENGINEERS_DATA.map((eng) => (
           <div
             key={eng.id}
-            className="p-4 rounded-lg border border-oliva/10 dark:border-oliva-border bg-white/40 dark:bg-oliva-surface hover:border-salvia/50 transition-colors flex flex-col justify-between"
+            className="h-full p-4 rounded-lg border border-oliva/10 dark:border-oliva-border bg-white/40 dark:bg-oliva-surface hover:border-salvia/50 transform-gpu hover:-translate-y-1 transition-transform duration-200 flex flex-col justify-between shadow-2xs hover:shadow-md"
           >
             <div>
               <p className="text-[10px] text-salvia uppercase font-bold tracking-wider">
@@ -34,13 +34,13 @@ export const TeamSection: React.FC = () => {
                 {eng.role}
               </p>
 
-              <p className="text-[11px] text-oliva/70 dark:text-almendra/70 mt-2.5 font-sans leading-relaxed">
+              <p className="text-[11px] text-oliva/85 dark:text-almendra/80 mt-2.5 font-sans leading-relaxed">
                 {eng.bio}
               </p>
             </div>
 
             {/* Skills */}
-            <div className="mt-4 pt-2.5 border-t border-oliva/10 dark:border-oliva-border/40 flex flex-wrap gap-1 text-[10px] text-oliva/60 dark:text-almendra/60">
+            <div className="mt-4 pt-2.5 border-t border-oliva/10 dark:border-oliva-border/40 flex flex-wrap gap-1 text-[10px] text-oliva/80 dark:text-almendra/70">
               {eng.skills.map((skill) => (
                 <span
                   key={skill}

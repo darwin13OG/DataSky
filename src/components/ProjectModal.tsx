@@ -54,6 +54,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
             id={project.id}
             name={project.name}
             domain={project.domain}
+            faviconUrl={project.faviconUrl}
             size="lg"
           />
           <div>

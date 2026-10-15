@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { GITHUB_ORG_URL, WHATSAPP_URL, CONTACT_EMAIL } from '../data/team.ts';
-import { DataSkyLogo } from './DataSkyLogo.tsx';
 
 export const Hero: React.FC = () => {
   const [copiedEmail, setCopiedEmail] = useState(false);
@@ -19,22 +18,14 @@ export const Hero: React.FC = () => {
         3 Desarrolladores Full-Stack
       </div>
 
-      {/* Main Headline with Heavy Space Grotesk 900 & Cloud Logo */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-6">
-        <h1 className="font-title font-black text-4xl sm:text-6xl uppercase tracking-tight leading-[0.95] text-oliva dark:text-almendra">
-          Software directo, <br className="hidden sm:inline" />
-          <span className="text-salvia">rápido y a medida.</span>
-        </h1>
-        <div className="hidden lg:flex flex-col items-center justify-center p-3.5 rounded-xl border border-oliva/10 dark:border-oliva-border/40 bg-white/20 dark:bg-oliva-surface/40 shrink-0">
-          <DataSkyLogo size="lg" />
-          <span className="text-[10px] font-mono font-semibold text-salvia mt-1.5 uppercase">
-            DataSky Studio
-          </span>
-        </div>
-      </div>
+      {/* Main Headline with Heavy Space Grotesk 900 */}
+      <h1 className="font-title font-black text-4xl sm:text-6xl uppercase tracking-tight leading-[0.95] text-oliva dark:text-almendra mb-6">
+        Software directo, <br className="hidden sm:inline" />
+        <span className="text-salvia">rápido y a medida.</span>
+      </h1>
 
       {/* Direct narrative, honest and simple */}
-      <p className="text-base sm:text-lg max-w-xl text-oliva/80 dark:text-almendra/70 mb-8 leading-relaxed font-normal">
+      <p className="text-base sm:text-lg max-w-xl text-oliva/90 dark:text-almendra/80 mb-8 leading-relaxed font-normal">
         Construimos sistemas de inventario, herramientas internas y plataformas web.
         Desarrollado directamente por técnicos, sin intermediarios.
       </p>

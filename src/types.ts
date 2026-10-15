@@ -12,6 +12,7 @@ export interface Project {
   highlights: string[];
   metrics?: string;
   version: string;
+  faviconUrl?: string;
 }
 
 export interface Engineer {

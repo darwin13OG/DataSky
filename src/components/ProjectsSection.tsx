@@ -36,7 +36,7 @@ export const ProjectsSection: React.FC = () => {
           return (
             <div
               key={project.id}
-              className="group rounded-lg border border-oliva/15 dark:border-oliva-border/70 bg-white/40 dark:bg-oliva-surface/70 hover:border-salvia/60 transition-all duration-200 p-4 sm:p-5 flex flex-col justify-between"
+              className="group h-full rounded-lg border border-oliva/15 dark:border-oliva-border/70 bg-white/40 dark:bg-oliva-surface/70 hover:border-salvia/60 transform-gpu hover:-translate-y-1 transition-transform duration-200 p-4 sm:p-5 flex flex-col justify-between shadow-2xs hover:shadow-md"
             >
               <div>
                 {/* Header line */}
@@ -51,20 +51,21 @@ export const ProjectsSection: React.FC = () => {
                     id={project.id}
                     name={project.name}
                     domain={project.domain}
+                    faviconUrl={project.faviconUrl}
                     size="md"
                   />
                   <div className="flex-1 min-w-0">
                     <h3 className="font-title font-bold text-lg uppercase tracking-tight text-oliva dark:text-almendra group-hover:text-salvia transition-colors">
                       {project.name}
                     </h3>
-                    <p className="text-[11px] font-mono text-oliva/50 dark:text-almendra/50 truncate">
+                    <p className="text-[11px] font-mono text-oliva/70 dark:text-almendra/60 truncate">
                       {project.domain}
                     </p>
                   </div>
                 </div>
 
                 {/* Description */}
-                <p className="text-xs text-oliva/80 dark:text-almendra/75 leading-relaxed mb-4">
+                <p className="text-xs text-oliva/90 dark:text-almendra/80 leading-relaxed mb-4">
                   {project.shortDescription}
                 </p>
 
