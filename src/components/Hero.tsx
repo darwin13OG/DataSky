@@ -30,11 +30,19 @@ export const Hero: React.FC = () => {
         </div>
       </div>
 
-      {/* Main Headline with Heavy Space Grotesk 900 */}
-      <h1 className="font-title font-black text-4xl sm:text-6xl lg:text-7xl uppercase tracking-tight leading-[0.93] mb-6 text-oliva dark:text-almendra">
-        Software directo, <br className="hidden sm:inline" />
-        <span className="text-salvia">rápido y a medida.</span>
-      </h1>
+      {/* Main Headline with Heavy Space Grotesk 900 & Floating Cloud Mark */}
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-6">
+        <h1 className="font-title font-black text-4xl sm:text-6xl lg:text-7xl uppercase tracking-tight leading-[0.93] text-oliva dark:text-almendra">
+          Software directo, <br className="hidden sm:inline" />
+          <span className="text-salvia">rápido y a medida.</span>
+        </h1>
+        <div className="hidden lg:flex flex-col items-center justify-center p-4 rounded-2xl border border-oliva/10 dark:border-oliva-border/40 bg-white/20 dark:bg-oliva-surface/40 backdrop-blur-xs animate-gentle-float shrink-0">
+          <DataSkyLogo size="xl" />
+          <span className="text-[10px] font-mono font-bold text-salvia mt-2 tracking-widest uppercase">
+            DataSky Cloud
+          </span>
+        </div>
+      </div>
 
       {/* Narrative Lead */}
       <p className="text-base sm:text-lg max-w-xl text-oliva/80 dark:text-almendra/70 mb-8 leading-relaxed font-normal">

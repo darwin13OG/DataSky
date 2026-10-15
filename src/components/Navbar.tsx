@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useTheme } from '../context/ThemeContext.tsx';
 import { DataSkyLogo } from './DataSkyLogo.tsx';
+import { WHATSAPP_URL } from '../data/team.ts';
 
 export const Navbar: React.FC = () => {
   const { theme, toggleTheme } = useTheme();
@@ -100,7 +101,7 @@ export const Navbar: React.FC = () => {
 
           {/* WhatsApp Direct CTA button in header (desktop) */}
           <a
-            href="https://wa.me/573124093345"
+            href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="hidden sm:inline-flex items-center gap-1.5 font-title font-bold text-[11px] uppercase tracking-wider px-3.5 py-2 rounded bg-salvia/20 dark:bg-salvia/20 text-oliva dark:text-almendra border border-salvia/30 hover:bg-salvia hover:text-oliva-dark dark:hover:bg-salvia dark:hover:text-oliva-dark transition-all duration-200"
@@ -160,7 +161,7 @@ export const Navbar: React.FC = () => {
           </a>
           <div className="pt-2 flex items-center justify-between gap-2 border-t border-oliva/10 dark:border-oliva-border/40">
             <a
-              href="https://wa.me/573124093345"
+              href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="flex-1 text-center py-2.5 rounded bg-salvia text-oliva-dark font-bold text-[11px]"

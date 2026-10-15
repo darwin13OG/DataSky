@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { CONTACT_EMAIL, ALT_CONTACT_EMAIL, WHATSAPP_URL } from '../data/team.ts';
+import { CONTACT_EMAIL, WHATSAPP_URL, WHATSAPP_PHONE } from '../data/team.ts';
 
 export const ContactSection: React.FC = () => {
   const [projectType, setProjectType] = useState('Punto de Venta / Inventarios (POS)');
@@ -18,7 +18,7 @@ export const ContactSection: React.FC = () => {
 • Tipo: ${projectType}
 • Plazo estimado: ${timeline}
 ${clientMessage ? `• Detalle: ${clientMessage}` : '• Me gustaría agendar una llamada breve para revisar alcance y cotización.'}`;
-    return `https://wa.me/573124093345?text=${encodeURIComponent(text)}`;
+    return `https://wa.me/57${WHATSAPP_PHONE}?text=${encodeURIComponent(text)}`;
   };
 
   return (
@@ -57,7 +57,7 @@ ${clientMessage ? `• Detalle: ${clientMessage}` : '• Me gustaría agendar un
                 Chatea en tiempo real con uno de los ingenieros. Respondemos de inmediato para agendar o despejar dudas técnicas.
               </p>
               <p className="text-xs font-mono text-salvia mt-2 font-bold">
-                +57 312 4093345
+                +57 {WHATSAPP_PHONE}
               </p>
             </div>
 
@@ -76,13 +76,13 @@ ${clientMessage ? `• Detalle: ${clientMessage}` : '• Me gustaría agendar un
           <div className="p-5 rounded-lg border border-oliva/10 dark:border-oliva-border bg-white/40 dark:bg-oliva-surface flex flex-col justify-between">
             <div>
               <span className="text-[10px] font-mono font-bold text-salvia uppercase block mb-1">
-                Correo Electrónico
+                Correo Electrónico Oficial
               </span>
-              <h3 className="font-title font-bold text-base text-oliva dark:text-almendra uppercase">
+              <h3 className="font-title font-bold text-base text-oliva dark:text-almendra">
                 {CONTACT_EMAIL}
               </h3>
               <p className="text-xs text-oliva/60 dark:text-almendra/60 mt-0.5">
-                O también: {ALT_CONTACT_EMAIL}
+                Canal exclusivo para cotizaciones y acuerdos de desarrollo.
               </p>
             </div>
 

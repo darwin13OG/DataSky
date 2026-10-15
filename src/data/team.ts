@@ -34,6 +34,6 @@ export const ENGINEERS_DATA: Engineer[] = [
 ];
 
 export const GITHUB_ORG_URL = 'https://github.com/DataSky-Studio';
-export const WHATSAPP_URL = 'https://wa.me/573124093345';
+export const WHATSAPP_PHONE = '3218322388';
+export const WHATSAPP_URL = 'https://wa.me/573218322388';
 export const CONTACT_EMAIL = 'dataskystudio@gmail.com';
-export const ALT_CONTACT_EMAIL = 'contacto.dataskystudio@gmail.com';

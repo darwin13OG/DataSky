@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Project } from '../types.ts';
-import { getGoogleFaviconUrl } from '../data/projects.ts';
+import { ProjectBadgeIcon } from './ProjectBadgeIcon.tsx';
+import { TechIcon } from './TechIcons.tsx';
 
 interface ProjectModalProps {
   project: Project | null;
@@ -46,16 +47,13 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
           </svg>
         </button>
 
-        {/* Header with dynamic Google Favicon */}
+        {/* Header with Project Badge Icon */}
         <div className="flex items-start gap-4 mb-5 pr-8">
-          <img
-            src={getGoogleFaviconUrl(project.domain, 128)}
-            alt={`${project.name} Icon`}
-            className="w-12 h-12 rounded-lg bg-white p-1.5 border border-oliva/15 dark:border-oliva-border object-contain shrink-0 shadow-sm"
-            onError={(e) => {
-              (e.currentTarget as HTMLImageElement).src =
-                'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23A3B19B"%3E%3Cpath d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/%3E%3C/svg%3E';
-            }}
+          <ProjectBadgeIcon
+            id={project.id}
+            name={project.name}
+            domain={project.domain}
+            size="xl"
           />
           <div>
             <div className="flex flex-wrap items-center gap-2">
@@ -99,13 +97,14 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
           <h4 className="font-title font-bold text-xs uppercase tracking-wider text-oliva/60 dark:text-almendra/60 mb-2">
             Stack Técnico Utilizado
           </h4>
-          <div className="flex flex-wrap gap-1.5">
+          <div className="flex flex-wrap gap-2">
             {project.techStack.map((tech) => (
               <span
                 key={tech}
-                className="text-[11px] font-mono px-2 py-0.5 rounded border border-oliva/15 dark:border-oliva-border/60 text-oliva/75 dark:text-almendra/75 bg-white/40 dark:bg-oliva-dark/40"
+                className="inline-flex items-center gap-1.5 text-[11px] font-mono px-2.5 py-1 rounded border border-oliva/15 dark:border-oliva-border/60 text-oliva/85 dark:text-almendra/85 bg-white/40 dark:bg-oliva-dark/40"
               >
-                {tech}
+                <TechIcon name={tech} className="w-3.5 h-3.5" />
+                <span>{tech}</span>
               </span>
             ))}
           </div>

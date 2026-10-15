@@ -1,5 +1,5 @@
 import React from 'react';
-import { GITHUB_ORG_URL, WHATSAPP_URL, CONTACT_EMAIL, ALT_CONTACT_EMAIL } from '../data/team.ts';
+import { GITHUB_ORG_URL, WHATSAPP_URL, CONTACT_EMAIL } from '../data/team.ts';
 import { DataSkyLogo } from './DataSkyLogo.tsx';
 
 export const Footer: React.FC = () => {
@@ -63,20 +63,16 @@ export const Footer: React.FC = () => {
         </div>
 
         {/* Developers Explicit Mention & Direct Emails */}
-        <div className="p-4 rounded-lg border border-oliva/10 dark:border-oliva-border/60 bg-white/30 dark:bg-oliva-surface/60 flex flex-col sm:flex-row justify-between gap-4">
+        <div className="p-4 rounded-lg border border-oliva/10 dark:border-oliva-border/60 bg-white/30 dark:bg-oliva-surface/60 flex flex-col sm:flex-row justify-between items-center gap-4">
           <div className="text-[11px] text-oliva/70 dark:text-almendra/70 leading-relaxed">
             <span className="font-bold text-salvia uppercase">Ingenieros Desarrolladores:</span>{' '}
             <span>Darwin Alzate</span> · <span>Jose Manuel Posada Muñoz</span> · <span>Matyas García</span>.
           </div>
 
           <div className="text-[11px] text-oliva/60 dark:text-almendra/60 flex items-center gap-2">
-            <span>Contacto:</span>
-            <a href={`mailto:${CONTACT_EMAIL}`} className="text-salvia hover:underline">
+            <span>Contacto Oficial:</span>
+            <a href={`mailto:${CONTACT_EMAIL}`} className="text-salvia hover:underline font-bold">
               {CONTACT_EMAIL}
-            </a>
-            <span>/</span>
-            <a href={`mailto:${ALT_CONTACT_EMAIL}`} className="text-salvia hover:underline">
-              {ALT_CONTACT_EMAIL}
             </a>
           </div>
         </div>
