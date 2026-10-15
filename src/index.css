@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-almendra: #F5F3EF;
+  --color-salvia: #A3B19B;
+  --color-salvia-light: #C2CEC0;
+  --color-salvia-dark: #7E8E76;
+  --color-oliva: #3A403B;
+  --color-oliva-dark: #161917;
+  --color-oliva-surface: #202521;
+  --color-oliva-surface-hover: #262D28;
+  --color-oliva-border: #323A34;
+  --font-title: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Retícula técnica de fondo */
+.bg-grid-light {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(58, 64, 59, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(58, 64, 59, 0.05) 1px, transparent 1px);
+}
+
+.bg-grid-dark {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(163, 177, 155, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(163, 177, 155, 0.06) 1px, transparent 1px);
+}
+
+/* Subtle glow utility */
+.glow-salvia {
+  box-shadow: 0 0 25px -5px rgba(163, 177, 155, 0.25);
+}
+
+html {
+  scroll-behavior: smooth;
+}
