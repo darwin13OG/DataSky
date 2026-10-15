@@ -1,81 +1,55 @@
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
 
 /**
- * Hook that adds kinetic damping / cushioning when scrolling rapidly toward the
- * top or bottom edges of the page, preventing harsh abrupt boundary collisions.
+ * Hook that smoothly decelerates rapid scrolling near the top and bottom boundaries
+ * at a steady, fixed controlled velocity, preventing sudden jarring impacts.
  */
 export function useSmoothScrollBraking() {
-  const lastScrollY = useRef(0);
-  const lastTime = useRef(Date.now());
-  const isBraking = useRef(false);
-
   useEffect(() => {
-    let animationFrameId: number;
+    let animId: number | null = null;
+    let isBraking = false;
+
+    const smoothGlideTo = (targetY: number, fixedSpeed: number = 8) => {
+      if (isBraking) return;
+      isBraking = true;
+
+      const step = () => {
+        const currentY = window.scrollY;
+        const diff = targetY - currentY;
+
+        if (Math.abs(diff) <= 1) {
+          window.scrollTo(0, targetY);
+          isBraking = false;
+          animId = null;
+          return;
+        }
+
+        // Constant steady fixed velocity with soft arrival
+        const move = Math.sign(diff) * Math.min(Math.abs(diff), fixedSpeed);
+        window.scrollTo(0, currentY + move);
+        animId = requestAnimationFrame(step);
+      };
+
+      animId = requestAnimationFrame(step);
+    };
 
     const handleWheel = (e: WheelEvent) => {
-      const currentScrollY = window.scrollY;
+      const scrollY = window.scrollY;
       const windowHeight = window.innerHeight;
-      const documentHeight = document.documentElement.scrollHeight;
+      const docHeight = document.documentElement.scrollHeight;
       const delta = e.deltaY;
 
-      // When rapidly approaching the very top (within 140px) scrolling upward
-      if (currentScrollY <= 140 && delta < -35 && !isBraking.current) {
-        // Soften and cushion the approach
-        isBraking.current = true;
+      // Approaching top rapidly
+      if (scrollY <= 90 && delta < -25 && !isBraking) {
         e.preventDefault();
-
-        const startY = currentScrollY;
-        const targetY = 0;
-        const startTime = performance.now();
-        const duration = 400; // ms
-
-        const easeOutCubic = (t: number) => --t * t * t + 1;
-
-        const animateBrake = (currentTime: number) => {
-          const elapsed = currentTime - startTime;
-          const progress = Math.min(elapsed / duration, 1);
-          const easedProgress = easeOutCubic(progress);
-
-          window.scrollTo(0, startY + (targetY - startY) * easedProgress);
-
-          if (progress < 1) {
-            animationFrameId = requestAnimationFrame(animateBrake);
-          } else {
-            isBraking.current = false;
-          }
-        };
-
-        animationFrameId = requestAnimationFrame(animateBrake);
+        smoothGlideTo(0, 6);
       }
 
-      // When rapidly approaching the bottom (within 140px) scrolling downward
-      const distanceFromBottom = documentHeight - (currentScrollY + windowHeight);
-      if (distanceFromBottom <= 140 && delta > 35 && !isBraking.current) {
-        isBraking.current = true;
+      // Approaching bottom rapidly
+      const distFromBottom = docHeight - (scrollY + windowHeight);
+      if (distFromBottom <= 90 && delta > 25 && !isBraking) {
         e.preventDefault();
-
-        const startY = currentScrollY;
-        const targetY = documentHeight - windowHeight;
-        const startTime = performance.now();
-        const duration = 400;
-
-        const easeOutCubic = (t: number) => --t * t * t + 1;
-
-        const animateBrake = (currentTime: number) => {
-          const elapsed = currentTime - startTime;
-          const progress = Math.min(elapsed / duration, 1);
-          const easedProgress = easeOutCubic(progress);
-
-          window.scrollTo(0, startY + (targetY - startY) * easedProgress);
-
-          if (progress < 1) {
-            animationFrameId = requestAnimationFrame(animateBrake);
-          } else {
-            isBraking.current = false;
-          }
-        };
-
-        animationFrameId = requestAnimationFrame(animateBrake);
+        smoothGlideTo(docHeight - windowHeight, 6);
       }
     };
 
@@ -83,7 +57,7 @@ export function useSmoothScrollBraking() {
 
     return () => {
       window.removeEventListener('wheel', handleWheel);
-      if (animationFrameId) cancelAnimationFrame(animationFrameId);
+      if (animId) cancelAnimationFrame(animId);
     };
   }, []);
 }

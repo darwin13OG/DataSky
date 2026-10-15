@@ -6,7 +6,7 @@ interface TechIconProps {
   showLabel?: boolean;
 }
 
-export const TechIcon: React.FC<TechIconProps> = ({ name, className = 'w-4 h-4', showLabel = false }) => {
+export const TechIcon: React.FC<TechIconProps> = ({ name, className = 'w-3.5 h-3.5', showLabel = false }) => {
   const normalized = name.toLowerCase().trim();
 
   let iconSvg: React.ReactNode = null;
@@ -28,10 +28,10 @@ export const TechIcon: React.FC<TechIconProps> = ({ name, className = 'w-4 h-4',
     label = 'Vite';
     iconSvg = (
       <svg className={className} viewBox="0 0 32 32" fill="none">
-        <path d="M29.5 5.5L16.8 28.3a1 1 0 01-1.6 0L2.5 5.5a1 1 0 011-1.5h25a1 1 0 011 1.5z" fill="url(#viteGradient)" />
+        <path d="M29.5 5.5L16.8 28.3a1 1 0 01-1.6 0L2.5 5.5a1 1 0 011-1.5h25a1 1 0 011 1.5z" fill="url(#viteGrad2)" />
         <path d="M19.5 2.5L8.5 15.5h6l-3.5 11 12-14h-6.5l3.5-10z" fill="#FFD62E" />
         <defs>
-          <linearGradient id="viteGradient" x1="2" y1="4" x2="30" y2="28" gradientUnits="userSpaceOnUse">
+          <linearGradient id="viteGrad2" x1="2" y1="4" x2="30" y2="28" gradientUnits="userSpaceOnUse">
             <stop stopColor="#41D1FF" />
             <stop offset="1" stopColor="#BD34FE" />
           </linearGradient>
@@ -73,58 +73,50 @@ export const TechIcon: React.FC<TechIconProps> = ({ name, className = 'w-4 h-4',
       </svg>
     );
   } else if (normalized.includes('gemini') || normalized.includes('ia') || normalized.includes('ai')) {
-    label = 'Google Gemini API';
+    label = 'Gemini API';
+    // Clean neural network node glyph - NO stars!
     iconSvg = (
-      <svg className={className} viewBox="0 0 24 24" fill="none">
-        <path
-          d="M12 0C12 6.627 6.627 12 0 12C6.627 12 12 17.373 12 24C12 17.373 17.373 12 24 12C17.373 12 12 6.627 12 0Z"
-          fill="url(#geminiGrad)"
-        />
-        <defs>
-          <linearGradient id="geminiGrad" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
-            <stop stopColor="#1BA1E3" />
-            <stop offset="0.5" stopColor="#5B7FFF" />
-            <stop offset="1" stopColor="#C973FF" />
-          </linearGradient>
-        </defs>
-      </svg>
-    );
-  } else if (normalized.includes('node')) {
-    label = 'Node.js';
-    iconSvg = (
-      <svg className={className} viewBox="0 0 24 24" fill="none">
-        <path d="M12 2L3 7.2v10.4L12 23l9-5.4V7.2L12 2z" fill="#539E43" />
-        <path d="M12 4.2l6.8 3.9v7.8L12 19.8l-6.8-3.9V8.1L12 4.2z" fill="#333333" />
-        <path d="M12 6.5l4.5 2.6v5.2L12 16.9l-4.5-2.6V9.1L12 6.5z" fill="#539E43" />
+      <svg className={className} viewBox="0 0 24 24" fill="none" stroke="#818CF8" strokeWidth="2">
+        <circle cx="12" cy="5" r="2.5" />
+        <circle cx="5" cy="18" r="2.5" />
+        <circle cx="19" cy="18" r="2.5" />
+        <line x1="12" y1="7.5" x2="6.5" y2="16" />
+        <line x1="12" y1="7.5" x2="17.5" y2="16" />
+        <line x1="7.5" y1="18" x2="16.5" y2="18" />
       </svg>
     );
   } else if (normalized.includes('web api') || normalized.includes('barcode') || normalized.includes('scanner')) {
     label = 'Web APIs';
     iconSvg = (
       <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M3 7V5a2 2 0 012-2h2M17 3h2a2 2 0 012 2v2M21 17v2a2 2 0 01-2 2h-2M7 21H5a2 2 0 01-2-2v-2" />
-        <line x1="7" y1="8" x2="7" y2="16" />
-        <line x1="10" y1="8" x2="10" y2="16" />
-        <line x1="14" y1="8" x2="14" y2="16" />
-        <line x1="17" y1="8" x2="17" y2="16" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M4 7V5a1 1 0 011-1h2M17 4h2a1 1 0 011 1v2M20 17v2a1 1 0 01-1 1h-2M7 20H5a1 1 0 01-1-1v-2" />
+        <line x1="8" y1="8" x2="8" y2="16" />
+        <line x1="12" y1="8" x2="12" y2="16" />
+        <line x1="16" y1="8" x2="16" y2="16" />
       </svg>
     );
-  } else if (normalized.includes('localstorage') || normalized.includes('state')) {
-    label = 'LocalStorage';
+  } else if (normalized.includes('html')) {
+    label = 'HTML5';
     iconSvg = (
-      <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-        <ellipse cx="12" cy="5" rx="9" ry="3" />
-        <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
-        <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+      <svg className={className} viewBox="0 0 24 24" fill="none">
+        <path d="M3 2l1.6 18 7.4 2 7.4-2L21 2H3z" fill="#E34F26" />
+        <path d="M12 3.8v16.4l5.9-1.6L19.2 3.8H12z" fill="#EF652A" />
+      </svg>
+    );
+  } else if (normalized.includes('css')) {
+    label = 'CSS';
+    iconSvg = (
+      <svg className={className} viewBox="0 0 24 24" fill="none">
+        <path d="M3 2l1.6 18 7.4 2 7.4-2L21 2H3z" fill="#1572B6" />
+        <path d="M12 3.8v16.4l5.9-1.6L19.2 3.8H12z" fill="#33A9DC" />
       </svg>
     );
   } else {
-    // Elegant fallback icon
     label = name;
     iconSvg = (
       <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-        <rect x="3" y="3" width="18" height="18" rx="2" />
-        <path d="M9 3v18M3 9h18" />
+        <polyline points="16 18 22 12 16 6" />
+        <polyline points="8 6 2 12 8 18" />
       </svg>
     );
   }

@@ -24,6 +24,6 @@ export const FAQS_DATA: FaqItem[] = [
   {
     id: 'faq-5',
     question: '¿Cómo iniciamos una propuesta o cotización?',
-    answer: 'Escríbenos directamente a WhatsApp (+57 321 8322388) o a dataskystudio@gmail.com con un breve resumen de lo que necesitas. Agendamos una llamada de 20 minutos con uno de los ingenieros y te entregamos un estimado de tiempos y costos en menos de 24 horas.'
+    answer: 'Escríbenos directamente a WhatsApp (+57 321 8322388) o a dataskystudio@gmail.com con un breve resumen de lo que necesitas. Agendamos una llamada de 20 minutos con uno de nosotros y te entregamos un estimado de tiempos y costos en menos de 24 horas.'
   }
 ];

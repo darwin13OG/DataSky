@@ -13,17 +13,15 @@ export const PROJECTS_DATA: Project[] = [
     category: 'Retail / Inventarios',
     categorySlug: 'retail',
     shortDescription: 'Sistema de punto de venta y lectura de códigos de barra para comercios. Control de inventario ágil y cobro en mostrador.',
-    fullDescription: 'Plataforma web de Punto de Venta (POS) diseñada para terminales de venta minorista y control de bodega en tiempo real. Integra escaneo óptico mediante cámara y hardware USB, cálculo instantáneo de cobros e impuestos, y persistencia local para operaciones sin caídas.',
-    techStack: ['Vite', 'Web APIs', 'Tailwind CSS', 'LocalStorage Engine', 'Barcode Detection API'],
+    fullDescription: 'Aplicación web de punto de venta diseñada para comercios y control de productos. Incluye lectura de códigos de barra, gestión de catálogo y cálculo de cobro en mostrador.',
+    techStack: ['Vite', 'JavaScript', 'Tailwind CSS', 'Web APIs'],
     techStackSummary: 'Vite • Web APIs • Tailwind',
     highlights: [
-      'Lectura de códigos de barra en milisegundos con cámara o escáner USB',
-      'Cálculo de tickets, subtotales, IVA y vuelto en tiempo real',
-      'Catálogo de inventario rápido con alertas de stock mínimo',
-      'Arquitectura offline-first para operar aún con intermitencia de red'
+      'Lectura de códigos de barra mediante cámara web o escáner',
+      'Gestión de catálogo de productos e inventario',
+      'Cálculo de cobro y registro de transacciones locales'
     ],
-    metrics: '< 100ms respuesta en escaneo',
-    version: 'v2.4 Pro'
+    version: 'En línea'
   },
   {
     id: 'flickwallet',
@@ -33,17 +31,15 @@ export const PROJECTS_DATA: Project[] = [
     category: 'Fintech UI',
     categorySlug: 'fintech',
     shortDescription: 'Panel de control financiero y billetera digital. Monitor de transferencias, balances y métricas de gastos en tiempo real.',
-    fullDescription: 'Dashboard de finanzas personales y empresariales enfocado en la visualización clara de flujos de capital, saldos de cuentas corrientes, tarjetas virtuales y categorización algorítmica de egresos mensuales.',
-    techStack: ['React', 'Componentes Modulares', 'SPA', 'Tailwind CSS', 'State Management'],
+    fullDescription: 'Interfaz de billetera digital con visualización de saldos, movimientos recientes, registro de transacciones y diseño adaptable.',
+    techStack: ['React', 'JavaScript', 'Tailwind CSS', 'SPA'],
     techStackSummary: 'React • Componentes Modulares • SPA',
     highlights: [
-      'Visualización inmediata de balance global y desglose por divisas',
-      'Historial de movimientos con filtros instantáneos y estados de pago',
-      'Simulador de transferencias internas e interbancarias',
-      'Diseño modular desacoplado listo para conectar con APIs bancarias'
+      'Visualización de balance y métricas de gastos',
+      'Historial de movimientos con estados de transacción',
+      'Interfaz modular para gestión de cuentas'
     ],
-    metrics: '99.9% fluidez en renderizado',
-    version: 'v1.8 Core'
+    version: 'En línea'
   },
   {
     id: 'cotizador-express',
@@ -53,17 +49,15 @@ export const PROJECTS_DATA: Project[] = [
     category: 'Automatización',
     categorySlug: 'automation',
     shortDescription: 'Generador instantáneo de presupuestos y cotizaciones para empresas. Cálculos paramétricos y desglose automático de costos.',
-    fullDescription: 'Herramienta pensada para contratistas, agencias y proveedores de servicios que necesitan elaborar cotizaciones formales en menos de 60 segundos con desglose de mano de obra, materiales, descuentos e impuestos.',
-    techStack: ['JavaScript', 'Cloudflare Pages', 'CSS Moderno', 'Export Engine', 'HTML5 Canvas'],
+    fullDescription: 'Herramienta para crear y exportar cotizaciones y presupuestos desglosados, facilitando el cálculo de mano de obra, materiales y costos finales.',
+    techStack: ['JavaScript', 'HTML5', 'CSS', 'Cloudflare Pages'],
     techStackSummary: 'JavaScript • Cloudflare Pages • CSS',
     highlights: [
-      'Generación paramétrica de renglones de cotización por horas o ítems',
-      'Ajuste dinámico de márgenes de utilidad e impuestos comerciales',
-      'Vista previa en tiempo real para exportación directa a PDF limpio',
-      'Carga ultraligera con despliegue en CDN global de Cloudflare'
+      'Cálculo automático de subtotales, márgenes e impuestos',
+      'Generación de presupuestos listos para imprimir o compartir',
+      'Despliegue estático rápido y accesible'
     ],
-    metrics: 'Genera cotizaciones en < 30s',
-    version: 'v3.1 Production'
+    version: 'En línea'
   },
   {
     id: 'codewave-ai',
@@ -73,16 +67,14 @@ export const PROJECTS_DATA: Project[] = [
     category: 'Lab & Pipelines IA',
     categorySlug: 'ai',
     shortDescription: 'Suite con más de 10 demos interactivos de interfaz moderna y conexión a modelos de lenguaje (Gemini) para procesamiento de datos.',
-    fullDescription: 'Laboratorio técnico con prototipos interactivos que demuestran capacidades avanzadas de ingeniería de prompts, extracción inteligente de información, autocompletado semántico y asistentes integrados sin retrasos.',
-    techStack: ['React', 'Gemini API', 'Microinteracciones', 'Prompt Engineering', 'TypeScript'],
+    fullDescription: 'Laboratorio de pruebas con demos interactivos que exploran la conexión con modelos de inteligencia artificial y componentes modernos de interfaz.',
+    techStack: ['React', 'TypeScript', 'Tailwind CSS', 'Gemini API'],
     techStackSummary: 'React • Gemini API • Microinteracciones',
     highlights: [
-      '10+ experiencias interactivas funcionales en vivo',
-      'Conexión optimizada con modelos multimodales Gemini',
-      'Procesamiento en streaming con renderizado progresivo',
-      'Ejemplos reales aplicados a resumen de documentos y análisis'
+      'Múltiples demos interactivos para pruebas de interfaz',
+      'Conexión directa con la API de Gemini',
+      'Procesamiento interactivo de texto y respuestas en tiempo real'
     ],
-    metrics: '10+ demos en vivo',
-    version: 'v4.0 Lab'
+    version: 'En línea'
   }
 ];

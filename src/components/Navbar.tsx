@@ -106,7 +106,7 @@ export const Navbar: React.FC = () => {
             rel="noopener noreferrer"
             className="hidden sm:inline-flex items-center gap-1.5 font-title font-bold text-[11px] uppercase tracking-wider px-3.5 py-2 rounded bg-salvia/20 dark:bg-salvia/20 text-oliva dark:text-almendra border border-salvia/30 hover:bg-salvia hover:text-oliva-dark dark:hover:bg-salvia dark:hover:text-oliva-dark transition-all duration-200"
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span className="w-1.5 h-1.5 rounded-full bg-salvia"></span>
             Contacto
           </a>
 
@@ -143,7 +143,7 @@ export const Navbar: React.FC = () => {
             onClick={closeMobileMenu}
             className="px-3 py-2 rounded hover:bg-salvia/10 text-oliva dark:text-almendra"
           >
-            El Equipo (3 Ingenieros)
+            El Equipo (3 Técnicos)
           </a>
           <a
             href="#faq"
