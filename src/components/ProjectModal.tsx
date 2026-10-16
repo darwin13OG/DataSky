@@ -62,7 +62,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
               {project.name}
             </h3>
             <p className="text-xs font-mono text-[#B0A8A0] mt-0.5">
-              {project.category} · {project.domain}
+              {project.category} · Caso de Ejemplo
             </p>
           </div>
         </div>
@@ -121,7 +121,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
             rel="noopener noreferrer"
             className="text-xs font-title font-bold uppercase tracking-wider px-4 py-2 rounded bg-[#252321] text-[#FFFDF9] dark:bg-[#B0A8A0] dark:text-[#252321] hover:opacity-90 flex items-center gap-1"
           >
-            <span>Probar en vivo</span>
+            <span>Ver demo</span>
             <span className="font-mono text-xs">↗</span>
           </a>
         </div>

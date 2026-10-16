@@ -4,7 +4,7 @@ export interface Project {
   domain: string;
   url: string;
   category: string;
-  categorySlug: 'retail' | 'fintech' | 'automation' | 'ai';
+  categorySlug: 'retail' | 'fintech' | 'automation' | 'ai' | 'portfolio';
   shortDescription: string;
   fullDescription: string;
   techStack: string[];

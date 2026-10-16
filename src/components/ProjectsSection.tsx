@@ -19,14 +19,14 @@ export const ProjectsSection: React.FC = () => {
             <h2 className="font-title font-black text-2xl sm:text-3xl uppercase tracking-tight text-[#252321] dark:text-[#FFFDF9]">
               Lo que podemos hacer por tu negocio
             </h2>
-            <p className="text-xs sm:text-sm text-[#252321]/75 dark:text-[#FFFDF9]/75 mt-1 max-w-xl">
-              Sistemas fáciles de manejar para cobrar rápido, ordenar tus cuentas y atender clientes sin enredarte.
+            <p className="text-xs sm:text-sm text-[#252321]/85 dark:text-[#FFFDF9]/80 mt-1 max-w-xl">
+              Soluciones a la medida para manejar tu negocio, vender por internet y atender clientes sin enredarte. Mira algunos ejemplos de lo que podemos construir para ti:
             </p>
           </div>
 
           <div className="flex items-center gap-2 self-start sm:self-auto text-xs font-mono text-[#B0A8A0] font-semibold uppercase">
             <span className="w-1.5 h-1.5 rounded-full bg-[#B0A8A0]"></span>
-            <span>4 Soluciones Listas</span>
+            <span>Muestras de Trabajo</span>
           </div>
         </div>
       </FloatUpReveal>
@@ -42,10 +42,10 @@ export const ProjectsSection: React.FC = () => {
                 className="group h-full rounded-lg border border-[#252321]/15 dark:border-[#383532] bg-white/50 dark:bg-[#1E1C1A]/70 hover:border-[#B0A8A0] transform-gpu hover:-translate-y-1 transition-transform duration-200 p-4 sm:p-5 flex flex-col justify-between shadow-2xs hover:shadow-md"
               >
                 <div>
-                  {/* Header line */}
+                  {/* Header line - emphasizes that it's a sample of our work */}
                   <div className="flex items-center justify-between gap-2 mb-3 text-[11px] font-mono text-[#252321]/60 dark:text-[#FFFDF9]/60 pb-2 border-b border-[#252321]/10 dark:border-[#383532]/40">
-                    <span className="text-[#B0A8A0] font-bold">SOLUCIÓN {displayIndex}</span>
-                    <span>{project.category}</span>
+                    <span className="text-[#B0A8A0] font-bold">MUESTRA {displayIndex}</span>
+                    <span className="truncate">{project.category} · Ejemplo</span>
                   </div>
 
                   {/* Identity */}
@@ -93,7 +93,7 @@ export const ProjectsSection: React.FC = () => {
                     onClick={() => setActiveModalProject(project)}
                     className="text-xs font-mono text-[#252321]/75 dark:text-[#FFFDF9]/75 hover:text-[#B0A8A0] transition-colors cursor-pointer"
                   >
-                    Ver cómo funciona
+                    Ver detalles
                   </button>
 
                   <a
@@ -102,7 +102,7 @@ export const ProjectsSection: React.FC = () => {
                     rel="noopener noreferrer"
                     className="font-title font-bold text-xs uppercase tracking-wider px-3.5 py-1.5 rounded bg-[#252321] text-[#FFFDF9] dark:bg-[#B0A8A0] dark:text-[#252321] hover:opacity-90 active:scale-[0.98] transition-all flex items-center gap-1"
                   >
-                    <span>Probar en vivo</span>
+                    <span>Ver demo</span>
                     <span className="font-mono text-xs">↗</span>
                   </a>
                 </div>
@@ -112,15 +112,15 @@ export const ProjectsSection: React.FC = () => {
         })}
       </div>
 
-      {/* Commercial Call to Action Banner */}
+      {/* Commercial Call to Action Banner - emphasizes that we build custom solutions beyond these samples */}
       <FloatUpReveal delayMs={140} distancePx={32}>
         <div className="p-5 sm:p-6 rounded-lg border border-[#252321]/15 dark:border-[#383532] bg-white/40 dark:bg-[#1E1C1A]/50 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="text-center sm:text-left">
             <h3 className="font-title font-bold text-sm sm:text-base text-[#252321] dark:text-[#FFFDF9] uppercase">
-              ¿Necesitas algo a la medida de tu negocio?
+              ¿Tu negocio necesita algo diferente a estos ejemplos?
             </h3>
-            <p className="text-xs text-[#252321]/75 dark:text-[#FFFDF9]/75 mt-0.5">
-              Dinos qué vendes o qué quieres organizar y te lo armamos listo para usar.
+            <p className="text-xs text-[#252321]/80 dark:text-[#FFFDF9]/75 mt-0.5 max-w-xl">
+              Estas plataformas son solo una muestra de nuestro trabajo. Creamos tu tienda online con pagos, página web o sistema exclusivo adaptado al 100% a lo que vendes.
             </p>
           </div>
 
@@ -130,7 +130,7 @@ export const ProjectsSection: React.FC = () => {
             rel="noopener noreferrer"
             className="font-title font-bold text-xs uppercase tracking-wider px-4 py-2.5 rounded bg-[#252321] text-[#FFFDF9] dark:bg-[#B0A8A0] dark:text-[#252321] hover:opacity-90 transition-all whitespace-nowrap flex items-center gap-2 shrink-0"
           >
-            <span>Escribir por WhatsApp →</span>
+            <span>Cotizar mi idea por WhatsApp →</span>
           </a>
         </div>
       </FloatUpReveal>

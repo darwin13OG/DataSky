@@ -34,8 +34,7 @@ export const Hero: React.FC = () => {
       {/* Direct, non-technical commercial lead */}
       <FloatUpReveal delayMs={340} distancePx={32}>
         <p className="text-base sm:text-lg max-w-xl text-[#252321]/85 dark:text-[#FFFDF9]/80 mb-8 leading-relaxed font-normal">
-          Te creamos la página web, el sistema para cobrar en caja o el control de tus ventas.
-          Sin palabras raras ni complicaciones: te lo entregamos listo y te enseñamos a usarlo.
+          Te creamos tu página web, tienda online o sistema a la medida. ¿Aún no tienes nombre o logotipo para tu negocio? Te ayudamos a construir tu marca desde cero para que salgas a vender sin complicaciones.
         </p>
       </FloatUpReveal>
 
