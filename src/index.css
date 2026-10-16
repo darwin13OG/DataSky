@@ -75,9 +75,13 @@
   animation: gentleFloat 4s ease-in-out infinite;
 }
 
-/* Estilos de Lenis para scroll ultra-fluido (idéntico a concatenate.pages.dev) */
+/* Estilos de Lenis para scroll ultra-fluido (escritorio y móvil) */
 html.lenis, html.lenis body {
   height: auto;
+}
+
+html {
+  overscroll-behavior-y: none;
 }
 
 .lenis.lenis-smooth {

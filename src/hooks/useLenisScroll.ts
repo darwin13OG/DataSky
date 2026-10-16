@@ -2,20 +2,30 @@ import { useEffect } from 'react';
 import Lenis from 'lenis';
 
 /**
- * Initializes Lenis smooth scrolling with the exact momentum, damping,
- * and fluid inertia used on concatenate.pages.dev
+ * Initializes Lenis smooth scrolling with physical momentum, damping,
+ * and fluid inertia across BOTH desktop (wheel) and mobile devices (touch).
  */
 export function useLenisScroll() {
   useEffect(() => {
-    // Initialize Lenis with smooth momentum settings
+    // Respect user's accessibility preferences
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) return;
+
+    // Initialize Lenis with syncTouch enabled for mobile devices
     const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // exponential ease-out
+      duration: 1.4, // Softer, more luxurious glide
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Exponential ease-out
       orientation: 'vertical',
       gestureOrientation: 'vertical',
       smoothWheel: true,
-      wheelMultiplier: 0.95,
-      touchMultiplier: 1.2,
+      wheelMultiplier: 0.88, // Gentle mouse wheel increments
+      
+      // Touch damping on mobile devices
+      syncTouch: true, // Activates Lenis momentum on touchscreens
+      syncTouchLerp: 0.08, // Buttery smooth follow and damping
+      touchInertiaExponent: 1.85, // Natural physical coasting when swiping
+      touchMultiplier: 1.55, // Responsive finger travel distance
+      
       infinite: false
     });
 
@@ -36,7 +46,11 @@ export function useLenisScroll() {
           const element = document.querySelector(id);
           if (element) {
             e.preventDefault();
-            lenis.scrollTo(element as HTMLElement, { offset: -60 });
+            lenis.scrollTo(element as HTMLElement, {
+              offset: -55,
+              duration: 1.4,
+              easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+            });
           }
         }
       }
