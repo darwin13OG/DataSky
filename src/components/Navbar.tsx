@@ -16,15 +16,12 @@ export const Navbar: React.FC = () => {
         <a
           href="#"
           className="group flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#B0A8A0] rounded-sm"
-          aria-label="DataSky Studio Inicio"
+          aria-label="DataSky Inicio"
         >
           <DataSkyLogo size="md" />
           <span className="font-title font-black text-lg sm:text-xl tracking-tighter uppercase flex items-center">
             <span className="text-[#252321] dark:text-[#FFFDF9]">DATA</span>
             <span className="text-[#B0A8A0]">SKY</span>
-            <span className="text-[10px] font-mono font-medium px-1.5 py-0.5 rounded border border-[#B0A8A0]/40 text-[#B0A8A0] ml-1.5 hidden xs:inline-block">
-              STUDIO
-            </span>
           </span>
         </a>
 

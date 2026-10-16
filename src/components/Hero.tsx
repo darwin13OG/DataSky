@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { GITHUB_ORG_URL, WHATSAPP_URL, CONTACT_EMAIL } from '../data/team.ts';
+import { DataSkyLogo } from './DataSkyLogo.tsx';
 
 export const Hero: React.FC = () => {
   const [copiedEmail, setCopiedEmail] = useState(false);
@@ -12,10 +13,11 @@ export const Hero: React.FC = () => {
 
   return (
     <section className="pt-14 sm:pt-20 pb-12 sm:pb-16 relative">
-      {/* Top Badge: Clear & Friendly */}
-      <div className="inline-flex items-center gap-2 px-3 py-1 rounded text-xs font-mono font-medium border border-[#B0A8A0]/30 bg-[#B0A8A0]/10 text-[#252321] dark:text-[#B0A8A0] mb-6">
-        <span className="w-1.5 h-1.5 rounded-full bg-[#B0A8A0]"></span>
-        3 Especialistas listos para tu negocio
+      {/* Top Badge: Clear & Friendly with Official Logo */}
+      <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-md text-xs font-mono font-medium border border-[#B0A8A0]/30 bg-[#B0A8A0]/10 text-[#252321] dark:text-[#FFFDF9] mb-6">
+        <DataSkyLogo size="sm" />
+        <span className="w-1 h-1 rounded-full bg-[#B0A8A0]"></span>
+        <span>3 Especialistas listos para tu negocio</span>
       </div>
 
       {/* Main Headline with Heavy Space Grotesk 900 */}

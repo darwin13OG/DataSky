@@ -13,9 +13,10 @@ export const Footer: React.FC = () => {
         
         {/* Brand */}
         <div className="flex items-center justify-center gap-2.5">
-          <DataSkyLogo size="sm" />
-          <span className="font-title font-bold text-sm uppercase tracking-tight text-[#252321] dark:text-[#FFFDF9]">
-            DataSky Studio
+          <DataSkyLogo size="md" />
+          <span className="font-title font-black text-lg tracking-tighter uppercase flex items-center">
+            <span className="text-[#252321] dark:text-[#FFFDF9]">DATA</span>
+            <span className="text-[#B0A8A0]">SKY</span>
           </span>
         </div>
 
@@ -61,7 +62,7 @@ export const Footer: React.FC = () => {
 
         {/* Bottom Baseline Centered */}
         <div className="w-full flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px] text-[#252321]/50 dark:text-[#FFFDF9]/50 pt-1">
-          <span>DataSky Studio © {new Date().getFullYear()} — Soluciones fáciles y a la medida para tu negocio.</span>
+          <span>DataSky © {new Date().getFullYear()} — Soluciones fáciles y a la medida para tu negocio.</span>
           <button
             onClick={scrollToTop}
             className="hover:text-[#B0A8A0] transition-colors cursor-pointer py-1 font-medium"
