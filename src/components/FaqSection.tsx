@@ -3,9 +3,7 @@ import { FAQS_DATA } from '../data/faq.ts';
 import { FloatUpReveal } from './FloatUpReveal.tsx';
 
 export const FaqSection: React.FC = () => {
-  const [openIds, setOpenIds] = useState<Record<string, boolean>>({
-    'faq-1': true, // Open first by default
-  });
+  const [openIds, setOpenIds] = useState<Record<string, boolean>>({});
 
   const toggleFaq = (id: string) => {
     setOpenIds((prev) => ({
