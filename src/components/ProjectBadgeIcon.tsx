@@ -89,7 +89,7 @@ export const ProjectBadgeIcon: React.FC<ProjectBadgeIconProps> = ({
 
   return (
     <div
-      className={`${containerSizes} rounded-lg bg-[#161917] border border-salvia/30 flex items-center justify-center p-1.5 relative shadow-xs overflow-hidden shrink-0 group-hover:border-salvia transition-colors`}
+      className={`${containerSizes} rounded-lg bg-[#1E1C1A] border border-[#B0A8A0]/30 flex items-center justify-center p-1.5 relative shadow-xs overflow-hidden shrink-0 group-hover:border-[#B0A8A0] transition-colors`}
     >
       {!imageFailed ? (
         <>

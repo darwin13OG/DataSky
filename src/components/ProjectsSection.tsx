@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Project } from '../types.ts';
 import { PROJECTS_DATA } from '../data/projects.ts';
-import { GITHUB_ORG_URL } from '../data/team.ts';
+import { WHATSAPP_URL } from '../data/team.ts';
 import { ProjectBadgeIcon } from './ProjectBadgeIcon.tsx';
 import { TechIcon } from './TechIcons.tsx';
 import { ProjectModal } from './ProjectModal.tsx';
@@ -10,21 +10,21 @@ export const ProjectsSection: React.FC = () => {
   const [activeModalProject, setActiveModalProject] = useState<Project | null>(null);
 
   return (
-    <section id="proyectos" className="py-14 sm:py-16 border-t border-oliva/10 dark:border-oliva-border/40">
+    <section id="proyectos" className="py-14 sm:py-16 border-t border-[#252321]/10 dark:border-[#383532]">
       {/* Section Header */}
       <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-3 mb-8">
         <div>
-          <h2 className="font-title font-black text-2xl sm:text-3xl uppercase tracking-tight text-oliva dark:text-almendra">
-            Proyectos Destacados
+          <h2 className="font-title font-black text-2xl sm:text-3xl uppercase tracking-tight text-[#252321] dark:text-[#FFFDF9]">
+            Lo que podemos hacer por tu negocio
           </h2>
-          <p className="text-xs sm:text-sm text-oliva/70 dark:text-almendra/70 mt-1 max-w-xl">
-            Sistemas funcionales desarrollados y desplegados por el equipo.
+          <p className="text-xs sm:text-sm text-[#252321]/75 dark:text-[#FFFDF9]/75 mt-1 max-w-xl">
+            Sistemas fáciles de manejar para cobrar rápido, ordenar tus cuentas y atender clientes sin enredarte.
           </p>
         </div>
 
-        <div className="flex items-center gap-2 self-start sm:self-auto text-xs font-mono text-salvia font-semibold uppercase">
-          <span className="w-1.5 h-1.5 rounded-full bg-salvia"></span>
-          <span>4 Proyectos</span>
+        <div className="flex items-center gap-2 self-start sm:self-auto text-xs font-mono text-[#B0A8A0] font-semibold uppercase">
+          <span className="w-1.5 h-1.5 rounded-full bg-[#B0A8A0]"></span>
+          <span>4 Soluciones Listas</span>
         </div>
       </div>
 
@@ -36,12 +36,12 @@ export const ProjectsSection: React.FC = () => {
           return (
             <div
               key={project.id}
-              className="group h-full rounded-lg border border-oliva/15 dark:border-oliva-border/70 bg-white/40 dark:bg-oliva-surface/70 hover:border-salvia/60 transform-gpu hover:-translate-y-1 transition-transform duration-200 p-4 sm:p-5 flex flex-col justify-between shadow-2xs hover:shadow-md"
+              className="group h-full rounded-lg border border-[#252321]/15 dark:border-[#383532] bg-white/50 dark:bg-[#1E1C1A]/70 hover:border-[#B0A8A0] transform-gpu hover:-translate-y-1 transition-transform duration-200 p-4 sm:p-5 flex flex-col justify-between shadow-2xs hover:shadow-md"
             >
               <div>
                 {/* Header line */}
-                <div className="flex items-center justify-between gap-2 mb-3 text-[11px] font-mono text-oliva/50 dark:text-almendra/50 pb-2 border-b border-oliva/10 dark:border-oliva-border/40">
-                  <span className="text-salvia font-bold">PROYECTO {displayIndex}</span>
+                <div className="flex items-center justify-between gap-2 mb-3 text-[11px] font-mono text-[#252321]/60 dark:text-[#FFFDF9]/60 pb-2 border-b border-[#252321]/10 dark:border-[#383532]/40">
+                  <span className="text-[#B0A8A0] font-bold">SOLUCIÓN {displayIndex}</span>
                   <span>{project.category}</span>
                 </div>
 
@@ -55,26 +55,26 @@ export const ProjectsSection: React.FC = () => {
                     size="md"
                   />
                   <div className="flex-1 min-w-0">
-                    <h3 className="font-title font-bold text-lg uppercase tracking-tight text-oliva dark:text-almendra group-hover:text-salvia transition-colors">
+                    <h3 className="font-title font-bold text-base sm:text-lg uppercase tracking-tight text-[#252321] dark:text-[#FFFDF9] group-hover:text-[#B0A8A0] transition-colors">
                       {project.name}
                     </h3>
-                    <p className="text-[11px] font-mono text-oliva/70 dark:text-almendra/60 truncate">
+                    <p className="text-[11px] font-mono text-[#252321]/60 dark:text-[#FFFDF9]/60 truncate">
                       {project.domain}
                     </p>
                   </div>
                 </div>
 
-                {/* Description */}
-                <p className="text-xs text-oliva/90 dark:text-almendra/80 leading-relaxed mb-4">
+                {/* Friendly Description */}
+                <p className="text-xs text-[#252321]/85 dark:text-[#FFFDF9]/80 leading-relaxed mb-4">
                   {project.shortDescription}
                 </p>
 
-                {/* Technologies with original icons */}
+                {/* Clear Benefit Tags */}
                 <div className="flex flex-wrap gap-1.5 mb-4">
                   {project.techStack.map((tech) => (
                     <div
                       key={tech}
-                      className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded border border-oliva/15 dark:border-oliva-border/60 bg-white/50 dark:bg-oliva-dark/50 text-[10px] font-mono text-oliva/80 dark:text-almendra/80"
+                      className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded border border-[#252321]/15 dark:border-[#383532] bg-white/70 dark:bg-[#1A1817]/60 text-[11px] font-sans font-medium text-[#252321]/90 dark:text-[#FFFDF9]/90"
                     >
                       <TechIcon name={tech} className="w-3 h-3" />
                       <span>{tech}</span>
@@ -84,22 +84,22 @@ export const ProjectsSection: React.FC = () => {
               </div>
 
               {/* Action buttons */}
-              <div className="pt-3 border-t border-oliva/10 dark:border-oliva-border/40 flex items-center justify-between gap-2">
+              <div className="pt-3 border-t border-[#252321]/10 dark:border-[#383532]/40 flex items-center justify-between gap-2">
                 <button
                   type="button"
                   onClick={() => setActiveModalProject(project)}
-                  className="text-xs font-mono text-oliva/70 dark:text-almendra/70 hover:text-salvia transition-colors cursor-pointer"
+                  className="text-xs font-mono text-[#252321]/75 dark:text-[#FFFDF9]/75 hover:text-[#B0A8A0] transition-colors cursor-pointer"
                 >
-                  Detalles
+                  Ver cómo funciona
                 </button>
 
                 <a
                   href={project.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-title font-bold text-xs uppercase tracking-wider px-3.5 py-1.5 rounded bg-oliva text-almendra dark:bg-salvia dark:text-oliva-dark hover:opacity-90 active:scale-[0.98] transition-all flex items-center gap-1"
+                  className="font-title font-bold text-xs uppercase tracking-wider px-3.5 py-1.5 rounded bg-[#252321] text-[#FFFDF9] dark:bg-[#B0A8A0] dark:text-[#252321] hover:opacity-90 active:scale-[0.98] transition-all flex items-center gap-1"
                 >
-                  <span>Ver app</span>
+                  <span>Probar en vivo</span>
                   <span className="font-mono text-xs">↗</span>
                 </a>
               </div>
@@ -108,27 +108,24 @@ export const ProjectsSection: React.FC = () => {
         })}
       </div>
 
-      {/* GitHub Call to Action Banner */}
-      <div className="p-5 sm:p-6 rounded-lg border border-oliva/15 dark:border-oliva-border/60 bg-white/30 dark:bg-oliva-surface/50 flex flex-col sm:flex-row items-center justify-between gap-4">
+      {/* Commercial Call to Action Banner */}
+      <div className="p-5 sm:p-6 rounded-lg border border-[#252321]/15 dark:border-[#383532] bg-white/40 dark:bg-[#1E1C1A]/50 flex flex-col sm:flex-row items-center justify-between gap-4">
         <div className="text-center sm:text-left">
-          <h3 className="font-title font-bold text-sm sm:text-base text-oliva dark:text-almendra uppercase">
-            Más proyectos en GitHub
+          <h3 className="font-title font-bold text-sm sm:text-base text-[#252321] dark:text-[#FFFDF9] uppercase">
+            ¿Necesitas algo a la medida de tu negocio?
           </h3>
-          <p className="text-xs text-oliva/70 dark:text-almendra/70 mt-0.5">
-            Explora más repositorios y código abierto en nuestra organización.
+          <p className="text-xs text-[#252321]/75 dark:text-[#FFFDF9]/75 mt-0.5">
+            Dinos qué vendes o qué quieres organizar y te lo armamos listo para usar.
           </p>
         </div>
 
         <a
-          href={GITHUB_ORG_URL}
+          href={WHATSAPP_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="font-title font-bold text-xs uppercase tracking-wider px-4 py-2.5 rounded border border-oliva/20 dark:border-oliva-border hover:border-salvia text-oliva dark:text-almendra hover:text-salvia transition-all whitespace-nowrap flex items-center gap-2 shrink-0"
+          className="font-title font-bold text-xs uppercase tracking-wider px-4 py-2.5 rounded bg-[#252321] text-[#FFFDF9] dark:bg-[#B0A8A0] dark:text-[#252321] hover:opacity-90 transition-all whitespace-nowrap flex items-center gap-2 shrink-0"
         >
-          <svg className="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
-          </svg>
-          <span>github.com/DataSky-Studio</span>
+          <span>Escribir por WhatsApp →</span>
         </a>
       </div>
 

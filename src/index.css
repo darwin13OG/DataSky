@@ -1,36 +1,48 @@
 @import "tailwindcss";
+@import "lenis/dist/lenis.css";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --color-almendra: #F5F3EF;
-  --color-salvia: #A3B19B;
-  --color-salvia-light: #C2CEC0;
-  --color-salvia-dark: #7E8E76;
-  --color-oliva: #3A403B;
-  --color-oliva-dark: #161917;
-  --color-oliva-surface: #202521;
-  --color-oliva-surface-hover: #262D28;
-  --color-oliva-border: #323A34;
+  --color-crema: #FFFDF9;
+  --color-gris-calido: #B0A8A0;
+  --color-gris-calido-light: #D5CFC9;
+  --color-gris-calido-dark: #8C847C;
+  --color-negro-humo: #252321;
+  --color-negro-humo-dark: #1A1817;
+  --color-negro-humo-surface: #1E1C1A;
+  --color-negro-humo-border: #383532;
+
+  /* Aliases mapped to the new palette */
+  --color-almendra: #FFFDF9;
+  --color-salvia: #B0A8A0;
+  --color-salvia-light: #D5CFC9;
+  --color-salvia-dark: #8C847C;
+  --color-oliva: #252321;
+  --color-oliva-dark: #1A1817;
+  --color-oliva-surface: #1E1C1A;
+  --color-oliva-surface-hover: #292624;
+  --color-oliva-border: #3A3633;
+
   --font-title: 'Space Grotesk', sans-serif;
   --font-body: 'Inter', sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
 }
 
-/* Retícula técnica de fondo optimizada para 120fps */
+/* Retícula sutil con los nuevos tonos cálidos */
 .bg-grid-light {
   background-size: 32px 32px;
   background-image: 
-    linear-gradient(to right, rgba(58, 64, 59, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(58, 64, 59, 0.05) 1px, transparent 1px);
+    linear-gradient(to right, rgba(37, 35, 33, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(37, 35, 33, 0.04) 1px, transparent 1px);
   contain: strict;
 }
 
 .bg-grid-dark {
   background-size: 32px 32px;
   background-image: 
-    linear-gradient(to right, rgba(163, 177, 155, 0.06) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(163, 177, 155, 0.06) 1px, transparent 1px);
+    linear-gradient(to right, rgba(176, 168, 160, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(176, 168, 160, 0.07) 1px, transparent 1px);
   contain: strict;
 }
 
@@ -38,7 +50,7 @@
 @keyframes floatUp {
   0% {
     opacity: 0;
-    transform: translateY(44px);
+    transform: translateY(36px);
   }
   100% {
     opacity: 1;
@@ -56,22 +68,32 @@
 }
 
 .animate-float-up {
-  animation: floatUp 1.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: floatUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .animate-gentle-float {
   animation: gentleFloat 4s ease-in-out infinite;
 }
 
-html {
-  scroll-behavior: smooth;
-  overflow-y: auto;
+/* Estilos de Lenis para scroll ultra-fluido (idéntico a concatenate.pages.dev) */
+html.lenis, html.lenis body {
+  height: auto;
 }
 
-body {
-  overflow-x: hidden;
-  overflow-y: visible;
-  min-height: 100%;
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
 }
 
 /* Ocultar barra lateral de scroll en navegadores compatibles */
@@ -84,4 +106,9 @@ body {
 html, body {
   -ms-overflow-style: none;
   scrollbar-width: none;
+  background-color: #FFFDF9;
+}
+
+.dark body {
+  background-color: #252321;
 }

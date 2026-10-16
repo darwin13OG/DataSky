@@ -10,19 +10,19 @@ export const Navbar: React.FC = () => {
   const closeMobileMenu = () => setMobileMenuOpen(false);
 
   return (
-    <header className="border-b border-oliva/10 dark:border-oliva-border/60 backdrop-blur-md bg-almendra/90 dark:bg-oliva-dark/85 sticky top-0 z-50 px-4 sm:px-6 py-3.5 transition-colors duration-200">
+    <header className="border-b border-[#252321]/10 dark:border-[#383532] backdrop-blur-md bg-[#FFFDF9]/90 dark:bg-[#1A1817]/90 sticky top-0 z-50 px-4 sm:px-6 py-3.5 transition-colors duration-200">
       <div className="max-w-4xl mx-auto flex items-center justify-between">
         {/* Brand Link with Cloud Logo */}
         <a
           href="#"
-          className="group flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-salvia rounded-sm"
+          className="group flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#B0A8A0] rounded-sm"
           aria-label="DataSky Studio Inicio"
         >
           <DataSkyLogo size="md" />
           <span className="font-title font-black text-lg sm:text-xl tracking-tighter uppercase flex items-center">
-            <span className="text-oliva dark:text-almendra">DATA</span>
-            <span className="text-salvia">SKY</span>
-            <span className="text-[10px] font-mono font-medium px-1.5 py-0.5 rounded border border-salvia/40 text-salvia ml-1.5 hidden xs:inline-block">
+            <span className="text-[#252321] dark:text-[#FFFDF9]">DATA</span>
+            <span className="text-[#B0A8A0]">SKY</span>
+            <span className="text-[10px] font-mono font-medium px-1.5 py-0.5 rounded border border-[#B0A8A0]/40 text-[#B0A8A0] ml-1.5 hidden xs:inline-block">
               STUDIO
             </span>
           </span>
@@ -33,25 +33,25 @@ export const Navbar: React.FC = () => {
           <nav className="hidden md:flex items-center gap-5 text-xs font-semibold tracking-wide" aria-label="Navegación principal">
             <a
               href="#proyectos"
-              className="text-oliva/80 dark:text-almendra/80 hover:text-salvia dark:hover:text-salvia transition-colors py-1"
+              className="text-[#252321]/80 dark:text-[#FFFDF9]/80 hover:text-[#B0A8A0] dark:hover:text-[#B0A8A0] transition-colors py-1"
             >
-              Proyectos
+              Lo que hacemos
             </a>
             <a
               href="#equipo"
-              className="text-oliva/80 dark:text-almendra/80 hover:text-salvia dark:hover:text-salvia transition-colors py-1"
+              className="text-[#252321]/80 dark:text-[#FFFDF9]/80 hover:text-[#B0A8A0] dark:hover:text-[#B0A8A0] transition-colors py-1"
             >
-              Equipo
+              Quiénes somos
             </a>
             <a
               href="#faq"
-              className="text-oliva/80 dark:text-almendra/80 hover:text-salvia dark:hover:text-salvia transition-colors py-1"
+              className="text-[#252321]/80 dark:text-[#FFFDF9]/80 hover:text-[#B0A8A0] dark:hover:text-[#B0A8A0] transition-colors py-1"
             >
-              FAQ
+              Preguntas
             </a>
             <a
               href="#contacto"
-              className="text-oliva/80 dark:text-almendra/80 hover:text-salvia dark:hover:text-salvia transition-colors py-1"
+              className="text-[#252321]/80 dark:text-[#FFFDF9]/80 hover:text-[#B0A8A0] dark:hover:text-[#B0A8A0] transition-colors py-1"
             >
               Contacto
             </a>
@@ -60,30 +60,29 @@ export const Navbar: React.FC = () => {
           {/* Theme Switcher with Vector SVG Sun & Moon */}
           <button
             onClick={toggleTheme}
-            className="p-2 rounded-md border border-oliva/20 dark:border-oliva-border hover:border-salvia dark:hover:border-salvia bg-white/40 dark:bg-oliva-surface/80 transition-all duration-200 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-salvia flex items-center justify-center"
-            aria-label={`Cambiar a modo ${theme === 'dark' ? 'claro' : 'oscuro'}`}
-            title={`Cambiar a modo ${theme === 'dark' ? 'claro' : 'oscuro'}`}
+            className="p-2 rounded-md border border-[#252321]/15 dark:border-[#383532] hover:border-[#B0A8A0] dark:hover:border-[#B0A8A0] transition-colors flex items-center justify-center cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#B0A8A0]"
+            aria-label={theme === 'dark' ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'}
+            title={theme === 'dark' ? 'Activar tema claro' : 'Activar tema oscuro'}
           >
-            {theme === 'light' ? (
-              /* Icono Sol (Modo Claro activado, pulsar para oscuro) */
+            {theme === 'dark' ? (
               <svg
-                className="w-4 h-4 text-oliva transition-transform duration-200 hover:rotate-45"
+                className="w-4 h-4 text-[#B0A8A0] transition-transform duration-200 hover:rotate-45"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
               >
+                <circle cx="12" cy="12" r="5" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth="2"
-                  d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                  d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"
                 />
               </svg>
             ) : (
-              /* Icono Luna (Modo Oscuro activado, pulsar para claro) */
               <svg
-                className="w-4 h-4 text-salvia transition-transform duration-200 hover:-rotate-12"
+                className="w-4 h-4 text-[#252321] transition-transform duration-200 hover:-rotate-12"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -104,16 +103,16 @@ export const Navbar: React.FC = () => {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden sm:inline-flex items-center gap-1.5 font-title font-bold text-[11px] uppercase tracking-wider px-3.5 py-2 rounded bg-salvia/20 dark:bg-salvia/20 text-oliva dark:text-almendra border border-salvia/30 hover:bg-salvia hover:text-oliva-dark dark:hover:bg-salvia dark:hover:text-oliva-dark transition-all duration-200"
+            className="hidden sm:inline-flex items-center gap-1.5 font-title font-bold text-[11px] uppercase tracking-wider px-3.5 py-2 rounded bg-[#B0A8A0]/20 text-[#252321] dark:text-[#FFFDF9] border border-[#B0A8A0]/30 hover:bg-[#B0A8A0] hover:text-[#252321] dark:hover:bg-[#B0A8A0] dark:hover:text-[#252321] transition-all duration-200"
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-salvia"></span>
+            <span className="w-1.5 h-1.5 rounded-full bg-[#B0A8A0]"></span>
             Contacto
           </a>
 
           {/* Mobile Menu Toggle Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 rounded-md border border-oliva/20 dark:border-oliva-border text-oliva dark:text-almendra hover:border-salvia"
+            className="md:hidden p-2 rounded-md border border-[#252321]/20 dark:border-[#383532] text-[#252321] dark:text-[#FFFDF9] hover:border-[#B0A8A0]"
             aria-label="Abrir menú de navegación"
             aria-expanded={mobileMenuOpen}
           >
@@ -130,51 +129,43 @@ export const Navbar: React.FC = () => {
 
       {/* Mobile Dropdown Navigation */}
       {mobileMenuOpen && (
-        <div className="md:hidden mt-3 pt-3 border-t border-oliva/10 dark:border-oliva-border/40 max-w-4xl mx-auto flex flex-col gap-2 font-title font-bold text-xs uppercase tracking-wider pb-2 animate-fadeIn">
+        <div className="md:hidden mt-3 pt-3 border-t border-[#252321]/10 dark:border-[#383532] max-w-4xl mx-auto flex flex-col gap-2 font-title font-bold text-xs uppercase tracking-wider pb-2">
           <a
             href="#proyectos"
             onClick={closeMobileMenu}
-            className="px-3 py-2 rounded hover:bg-salvia/10 text-oliva dark:text-almendra"
+            className="px-3 py-2 rounded hover:bg-[#B0A8A0]/10 text-[#252321] dark:text-[#FFFDF9]"
           >
-            Proyectos (04 Despliegues)
+            Lo que hacemos
           </a>
           <a
             href="#equipo"
             onClick={closeMobileMenu}
-            className="px-3 py-2 rounded hover:bg-salvia/10 text-oliva dark:text-almendra"
+            className="px-3 py-2 rounded hover:bg-[#B0A8A0]/10 text-[#252321] dark:text-[#FFFDF9]"
           >
-            El Equipo (3 Técnicos)
+            Quiénes somos
           </a>
           <a
             href="#faq"
             onClick={closeMobileMenu}
-            className="px-3 py-2 rounded hover:bg-salvia/10 text-oliva dark:text-almendra"
+            className="px-3 py-2 rounded hover:bg-[#B0A8A0]/10 text-[#252321] dark:text-[#FFFDF9]"
           >
-            Preguntas Frecuentes
+            Preguntas frecuentes
           </a>
           <a
             href="#contacto"
             onClick={closeMobileMenu}
-            className="px-3 py-2 rounded hover:bg-salvia/10 text-oliva dark:text-almendra"
+            className="px-3 py-2 rounded hover:bg-[#B0A8A0]/10 text-[#252321] dark:text-[#FFFDF9]"
           >
-            Contacto & Presupuestos
+            Hablemos de tu negocio
           </a>
-          <div className="pt-2 flex items-center justify-between gap-2 border-t border-oliva/10 dark:border-oliva-border/40">
+          <div className="pt-2 flex items-center justify-between gap-2 border-t border-[#252321]/10 dark:border-[#383532]">
             <a
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 text-center py-2.5 rounded bg-salvia text-oliva-dark font-bold text-[11px]"
+              className="flex-1 text-center py-2.5 rounded bg-[#252321] text-[#FFFDF9] dark:bg-[#B0A8A0] dark:text-[#252321] font-bold text-[11px]"
             >
               WhatsApp Directo →
-            </a>
-            <a
-              href="https://github.com/DataSky-Studio"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-3 py-2.5 rounded border border-oliva/20 dark:border-oliva-border text-center text-[11px]"
-            >
-              GitHub Org
             </a>
           </div>
         </div>

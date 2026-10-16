@@ -1,6 +1,6 @@
 {
-  "name": "DataSky Studio — Colectivo de Software",
-  "description": "Portafolio oficial de DataSky Studio. Software directo, rápido y a medida desarrollado por Darwin Alzate, Jose Manuel Posada Muñoz y Matyas García.",
+  "name": "DataSky Studio — Páginas y Sistemas para tu Negocio",
+  "description": "Soluciones fáciles y listas para usar que ayudan a tu negocio a vender más y ordenar sus cuentas. Desarrollado por Darwin Alzate, Jose Manuel Posada Muñoz y Matyas García.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

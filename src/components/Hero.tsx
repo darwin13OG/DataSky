@@ -12,53 +12,47 @@ export const Hero: React.FC = () => {
 
   return (
     <section className="pt-14 sm:pt-20 pb-12 sm:pb-16 relative">
-      {/* Top Badge: Honest, clean, no location, no blinking dots */}
-      <div className="inline-flex items-center gap-2 px-3 py-1 rounded text-xs font-mono font-medium border border-salvia/30 bg-salvia/10 text-oliva dark:text-salvia mb-6">
-        <span className="w-1.5 h-1.5 rounded-full bg-salvia"></span>
-        3 Desarrolladores Full-Stack
+      {/* Top Badge: Clear & Friendly */}
+      <div className="inline-flex items-center gap-2 px-3 py-1 rounded text-xs font-mono font-medium border border-[#B0A8A0]/30 bg-[#B0A8A0]/10 text-[#252321] dark:text-[#B0A8A0] mb-6">
+        <span className="w-1.5 h-1.5 rounded-full bg-[#B0A8A0]"></span>
+        3 Especialistas listos para tu negocio
       </div>
 
       {/* Main Headline with Heavy Space Grotesk 900 */}
-      <h1 className="font-title font-black text-4xl sm:text-6xl uppercase tracking-tight leading-[0.95] text-oliva dark:text-almendra mb-6">
-        Software directo, <br className="hidden sm:inline" />
-        <span className="text-salvia">rápido y a medida.</span>
+      <h1 className="font-title font-black text-4xl sm:text-6xl uppercase tracking-tight leading-[0.95] text-[#252321] dark:text-[#FFFDF9] mb-6">
+        Hacemos que tu negocio venda más, <br className="hidden sm:inline" />
+        <span className="text-[#B0A8A0]">fácil y por internet.</span>
       </h1>
 
-      {/* Direct narrative, honest and simple */}
-      <p className="text-base sm:text-lg max-w-xl text-oliva/90 dark:text-almendra/80 mb-8 leading-relaxed font-normal">
-        Construimos sistemas de inventario, herramientas internas y plataformas web.
-        Desarrollado directamente por técnicos, sin intermediarios.
+      {/* Direct, non-technical commercial lead */}
+      <p className="text-base sm:text-lg max-w-xl text-[#252321]/85 dark:text-[#FFFDF9]/80 mb-8 leading-relaxed font-normal">
+        Te creamos la página web, el sistema para cobrar en caja o el control de tus ventas.
+        Sin palabras raras ni complicaciones: te lo entregamos listo y te enseñamos a usarlo.
       </p>
 
-      {/* Action Buttons & Clean Copy Email (No emojis) */}
+      {/* Action Buttons & Clean Copy Email */}
       <div className="flex flex-wrap items-center gap-3 sm:gap-4">
         <a
           href={WHATSAPP_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="font-title font-bold text-xs uppercase tracking-wider px-6 py-3.5 rounded bg-oliva text-almendra dark:bg-salvia dark:text-oliva-dark hover:opacity-90 active:scale-[0.98] transition-all flex items-center gap-2"
+          className="font-title font-bold text-xs uppercase tracking-wider px-6 py-3.5 rounded bg-[#252321] text-[#FFFDF9] dark:bg-[#B0A8A0] dark:text-[#252321] hover:opacity-90 active:scale-[0.98] transition-all flex items-center gap-2"
         >
-          <span>Iniciar Proyecto por WhatsApp</span>
+          <span>Escríbenos por WhatsApp</span>
           <span className="font-mono text-xs">→</span>
         </a>
 
         <a
-          href={GITHUB_ORG_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="font-title font-bold text-xs uppercase tracking-wider px-5 py-3.5 rounded border border-oliva/20 dark:border-oliva-border bg-white/40 dark:bg-oliva-surface/50 text-oliva dark:text-almendra hover:border-salvia hover:text-salvia dark:hover:text-salvia active:scale-[0.98] transition-all flex items-center gap-2"
+          href="#proyectos"
+          className="font-title font-bold text-xs uppercase tracking-wider px-5 py-3.5 rounded border border-[#252321]/20 dark:border-[#383532] bg-white/40 dark:bg-[#1E1C1A]/50 text-[#252321] dark:text-[#FFFDF9] hover:border-[#B0A8A0] hover:text-[#B0A8A0] dark:hover:text-[#B0A8A0] active:scale-[0.98] transition-all flex items-center gap-2"
         >
-          {/* GitHub SVG */}
-          <svg className="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
-          </svg>
-          <span>GitHub Org</span>
+          <span>Ver lo que hemos hecho</span>
         </a>
 
         {/* Copy Email Fast Action */}
         <button
           onClick={handleCopyEmail}
-          className="font-mono text-xs px-3.5 py-3 rounded border border-oliva/15 dark:border-oliva-border/60 hover:border-salvia text-oliva/70 dark:text-almendra/70 hover:text-salvia dark:hover:text-salvia transition-colors flex items-center gap-2 cursor-pointer"
+          className="font-mono text-xs px-3.5 py-3 rounded border border-[#252321]/15 dark:border-[#383532]/60 hover:border-[#B0A8A0] text-[#252321]/70 dark:text-[#FFFDF9]/70 hover:text-[#B0A8A0] dark:hover:text-[#B0A8A0] transition-colors flex items-center gap-2 cursor-pointer"
           title="Copiar correo"
         >
           <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

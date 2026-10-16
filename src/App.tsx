@@ -8,11 +8,15 @@ import { FaqSection } from './components/FaqSection.tsx';
 import { ContactSection } from './components/ContactSection.tsx';
 import { Footer } from './components/Footer.tsx';
 import { FloatUpReveal } from './components/FloatUpReveal.tsx';
+import { useLenisScroll } from './hooks/useLenisScroll.ts';
 
 function MainLayout() {
+  // Lenis engine: replica exacta del desplazamiento fluido y amortiguado de concatenate.pages.dev
+  useLenisScroll();
+
   return (
-    <div className="relative min-h-screen bg-almendra text-oliva dark:bg-oliva-dark dark:text-almendra font-body antialiased transition-colors duration-200 flex flex-col selection:bg-salvia/30 selection:text-oliva-dark dark:selection:text-almendra">
-      {/* GPU-composited Fixed Background Grid (Prevents scroll repaints for maximum fluidity) */}
+    <div className="relative min-h-screen bg-[#FFFDF9] text-[#252321] dark:bg-[#252321] dark:text-[#FFFDF9] font-body antialiased transition-colors duration-200 flex flex-col selection:bg-[#B0A8A0]/30 selection:text-[#252321] dark:selection:text-[#FFFDF9]">
+      {/* GPU-composited Fixed Background Grid */}
       <div className="pointer-events-none fixed inset-0 z-0 bg-grid-light dark:bg-grid-dark transform-gpu" />
 
       {/* Top Navbar */}

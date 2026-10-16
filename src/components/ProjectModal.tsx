@@ -28,19 +28,19 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
 
   const modalContent = (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/70 backdrop-blur-xs overflow-y-auto"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/75 backdrop-blur-xs overflow-y-auto"
       role="dialog"
       aria-modal="true"
       onClick={onClose}
     >
       <div
-        className="relative w-full max-w-lg bg-almendra dark:bg-oliva-surface border border-oliva/20 dark:border-oliva-border rounded-xl shadow-2xl p-5 sm:p-6 my-auto text-left"
+        className="relative w-full max-w-lg bg-[#FFFDF9] dark:bg-[#1E1C1A] border border-[#252321]/20 dark:border-[#383532] rounded-xl shadow-2xl p-5 sm:p-6 my-auto text-left"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 p-1.5 rounded-md border border-oliva/15 dark:border-oliva-border text-oliva/70 dark:text-almendra/70 hover:text-salvia transition-colors cursor-pointer"
+          className="absolute top-4 right-4 p-1.5 rounded-md border border-[#252321]/15 dark:border-[#383532] text-[#252321]/70 dark:text-[#FFFDF9]/70 hover:text-[#B0A8A0] transition-colors cursor-pointer"
           aria-label="Cerrar modal"
         >
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -58,10 +58,10 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
             size="lg"
           />
           <div>
-            <h3 className="font-title font-bold text-xl uppercase tracking-tight text-oliva dark:text-almendra">
+            <h3 className="font-title font-bold text-xl uppercase tracking-tight text-[#252321] dark:text-[#FFFDF9]">
               {project.name}
             </h3>
-            <p className="text-xs font-mono text-salvia mt-0.5">
+            <p className="text-xs font-mono text-[#B0A8A0] mt-0.5">
               {project.category} · {project.domain}
             </p>
           </div>
@@ -69,36 +69,36 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
 
         {/* Detailed Description */}
         <div className="mb-4">
-          <p className="text-xs sm:text-sm text-oliva/80 dark:text-almendra/80 leading-relaxed font-sans">
+          <p className="text-xs sm:text-sm text-[#252321]/85 dark:text-[#FFFDF9]/80 leading-relaxed font-sans">
             {project.fullDescription}
           </p>
         </div>
 
-        {/* Highlights */}
+        {/* Key Business Benefits */}
         <div className="mb-4">
-          <h4 className="font-title font-bold text-xs uppercase tracking-wider text-oliva/60 dark:text-almendra/60 mb-2">
-            Características
+          <h4 className="font-title font-bold text-xs uppercase tracking-wider text-[#252321]/60 dark:text-[#FFFDF9]/60 mb-2">
+            Lo que ganas en tu negocio
           </h4>
-          <ul className="space-y-1 text-xs text-oliva/80 dark:text-almendra/80 font-sans">
+          <ul className="space-y-1.5 text-xs text-[#252321]/85 dark:text-[#FFFDF9]/85 font-sans">
             {project.highlights.map((item, idx) => (
               <li key={idx} className="flex items-start gap-2">
-                <span className="text-salvia font-bold mt-0.5">-</span>
+                <span className="text-[#B0A8A0] font-bold mt-0.5">✓</span>
                 <span>{item}</span>
               </li>
             ))}
           </ul>
         </div>
 
-        {/* Tech Stack */}
+        {/* Features / Capabilities */}
         <div className="mb-5">
-          <h4 className="font-title font-bold text-xs uppercase tracking-wider text-oliva/60 dark:text-almendra/60 mb-2">
-            Tecnologías
+          <h4 className="font-title font-bold text-xs uppercase tracking-wider text-[#252321]/60 dark:text-[#FFFDF9]/60 mb-2">
+            Incluye
           </h4>
           <div className="flex flex-wrap gap-1.5">
             {project.techStack.map((tech) => (
               <span
                 key={tech}
-                className="inline-flex items-center gap-1.5 text-[11px] font-mono px-2 py-0.5 rounded border border-oliva/15 dark:border-oliva-border/60 text-oliva/85 dark:text-almendra/85 bg-white/40 dark:bg-oliva-dark/40"
+                className="inline-flex items-center gap-1.5 text-[11px] font-sans font-medium px-2.5 py-1 rounded border border-[#252321]/15 dark:border-[#383532] text-[#252321]/90 dark:text-[#FFFDF9]/90 bg-white/50 dark:bg-[#1A1817]/60"
               >
                 <TechIcon name={tech} className="w-3 h-3" />
                 <span>{tech}</span>
@@ -108,10 +108,10 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
         </div>
 
         {/* Footer Actions */}
-        <div className="pt-3 border-t border-oliva/10 dark:border-oliva-border/60 flex items-center justify-end gap-2.5">
+        <div className="pt-3 border-t border-[#252321]/10 dark:border-[#383532]/60 flex items-center justify-end gap-2.5">
           <button
             onClick={onClose}
-            className="text-xs font-mono px-3.5 py-2 rounded border border-oliva/20 dark:border-oliva-border text-oliva dark:text-almendra hover:border-salvia cursor-pointer"
+            className="text-xs font-mono px-3.5 py-2 rounded border border-[#252321]/20 dark:border-[#383532] text-[#252321] dark:text-[#FFFDF9] hover:border-[#B0A8A0] cursor-pointer"
           >
             Cerrar
           </button>
@@ -119,9 +119,9 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
             href={project.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xs font-title font-bold uppercase tracking-wider px-4 py-2 rounded bg-salvia text-oliva-dark hover:opacity-90 flex items-center gap-1"
+            className="text-xs font-title font-bold uppercase tracking-wider px-4 py-2 rounded bg-[#252321] text-[#FFFDF9] dark:bg-[#B0A8A0] dark:text-[#252321] hover:opacity-90 flex items-center gap-1"
           >
-            <span>Abrir en vivo</span>
+            <span>Probar en vivo</span>
             <span className="font-mono text-xs">↗</span>
           </a>
         </div>

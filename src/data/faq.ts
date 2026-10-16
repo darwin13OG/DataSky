@@ -3,27 +3,27 @@ import { FaqItem } from '../types.ts';
 export const FAQS_DATA: FaqItem[] = [
   {
     id: 'faq-1',
-    question: '¿Quién atiende las reuniones y el avance del proyecto?',
-    answer: 'Tienen un solo punto de contacto directo y transparente. Uno de nosotros lidera la comunicación para no hacer reuniones eternas ni burocracia de agencias, mientras los 3 desarrollamos, testeamos y auditamos en paralelo.'
+    question: '¿Es difícil de usar si no sé mucho de tecnología?',
+    answer: 'Para nada. Lo hacemos tan sencillo que tú o tus empleados pueden usarlo desde el primer día en el celular o computador sin complicarse. Además, te enseñamos paso a paso cómo manejarlo y te dejamos todo listo para trabajar.'
   },
   {
     id: 'faq-2',
-    question: '¿Qué tecnologías utilizan en el colectivo?',
-    answer: 'Nuestro stack principal se basa en JavaScript / TypeScript moderno, React, Vite, Node.js, Tailwind CSS y despliegues serverless de alto rendimiento en Cloudflare o Vercel. Construimos código rápido, modular y sin dependencias pesadas innecesarias.'
+    question: '¿Qué tipo de cosas pueden hacer para mi negocio?',
+    answer: 'Hacemos páginas para mostrar y vender tus productos, sistemas para registrar ventas y cobrar rápido en caja, controles de inventario para saber qué tienes en bodega, y herramientas automáticas para responderle a tus clientes por WhatsApp.'
   },
   {
     id: 'faq-3',
-    question: '¿Tiempos de entrega habituales?',
-    answer: 'Entregamos prototipos e interfaces funcionales desde la primera semana para validación rápida. Proyectos completos y modulares suelen tomar de 2 a 4 semanas según el alcance y las integraciones requeridas.'
+    question: '¿Cuánto se demoran en tenerlo listo?',
+    answer: 'La mayoría de proyectos los tenemos listos y funcionando en entre 1 y 3 semanas, dependiendo de lo que necesites. Desde los primeros días te mostramos cómo va quedando para que nos des tu opinión.'
   },
   {
     id: 'faq-4',
-    question: '¿El código fuente y la infraestructura son de nuestra propiedad?',
-    answer: 'Totalmente. Desde el primer commit el repositorio privado en GitHub y la infraestructura en la nube se configuran a tu nombre. Entregamos documentación técnica clara, variables de entorno y scripts de despliegue listos para producción.'
+    question: '¿El sistema o página queda a mi nombre y es 100% mío?',
+    answer: 'Sí, totalmente tuyo. Tú eres el único dueño de tu información, tus clientes y tu página. No te cobramos mensualidades raras escondidas ni amarres.'
   },
   {
     id: 'faq-5',
-    question: '¿Cómo iniciamos una propuesta o cotización?',
-    answer: 'Escríbenos directamente a WhatsApp (+57 321 8322388) o a dataskystudio@gmail.com con un breve resumen de lo que necesitas. Agendamos una llamada de 20 minutos con uno de nosotros y te entregamos un estimado de tiempos y costos en menos de 24 horas.'
+    question: '¿Cómo empezamos y cómo pido una cotización?',
+    answer: 'Solo escríbenos a nuestro WhatsApp (+57 321 8322388) o al correo dataskystudio@gmail.com. Nos cuentas qué negocio tienes y qué necesitas, y te decimos exactamente cuánto te cuesta y en cuánto tiempo lo tienes listo, sin rodeos.'
   }
 ];
