@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://datasky.pages.dev/sitemap.xml
