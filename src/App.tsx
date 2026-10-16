@@ -24,31 +24,17 @@ function MainLayout() {
         <Navbar />
       </div>
 
-      {/* Main Content Area with fluid upward floating appearance */}
+      {/* Main Content Area - objects float up individually as you scroll */}
       <main className="relative z-10 flex-1 max-w-4xl w-full mx-auto px-4 sm:px-6">
-        <FloatUpReveal delayMs={30}>
-          <Hero />
-        </FloatUpReveal>
-
-        <FloatUpReveal delayMs={60}>
-          <ProjectsSection />
-        </FloatUpReveal>
-
-        <FloatUpReveal delayMs={60}>
-          <TeamSection />
-        </FloatUpReveal>
-
-        <FloatUpReveal delayMs={60}>
-          <FaqSection />
-        </FloatUpReveal>
-
-        <FloatUpReveal delayMs={60}>
-          <ContactSection />
-        </FloatUpReveal>
+        <Hero />
+        <ProjectsSection />
+        <TeamSection />
+        <FaqSection />
+        <ContactSection />
       </main>
 
       {/* Footer */}
-      <FloatUpReveal delayMs={30} className="relative z-10 w-full px-4 sm:px-6">
+      <FloatUpReveal delayMs={40} className="relative z-10 w-full px-4 sm:px-6">
         <Footer />
       </FloatUpReveal>
     </div>

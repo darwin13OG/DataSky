@@ -1,46 +1,17 @@
 import React, { useEffect, useRef, useState } from 'react';
 
-// High-performance shared Singleton IntersectionObserver across all components
-let sharedObserver: IntersectionObserver | null = null;
-const observerCallbacks = new Map<Element, () => void>();
-
-function getSharedObserver(): IntersectionObserver | null {
-  if (typeof window === 'undefined' || !('IntersectionObserver' in window)) {
-    return null;
-  }
-  if (!sharedObserver) {
-    sharedObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const cb = observerCallbacks.get(entry.target);
-            if (cb) {
-              cb();
-              observerCallbacks.delete(entry.target);
-              sharedObserver?.unobserve(entry.target);
-            }
-          }
-        });
-      },
-      {
-        threshold: 0.05,
-        rootMargin: '0px 0px -20px 0px'
-      }
-    );
-  }
-  return sharedObserver;
-}
-
 interface FloatUpRevealProps {
   children: React.ReactNode;
   delayMs?: number;
   className?: string;
+  distancePx?: number;
 }
 
 export const FloatUpReveal: React.FC<FloatUpRevealProps> = ({
   children,
   delayMs = 0,
-  className = ''
+  className = '',
+  distancePx = 36
 }) => {
   const [isVisible, setIsVisible] = useState(false);
   const elementRef = useRef<HTMLDivElement>(null);
@@ -49,33 +20,41 @@ export const FloatUpReveal: React.FC<FloatUpRevealProps> = ({
     const element = elementRef.current;
     if (!element) return;
 
-    const observer = getSharedObserver();
-    if (!observer) {
+    if (!('IntersectionObserver' in window)) {
       setIsVisible(true);
       return;
     }
 
-    observerCallbacks.set(element, () => {
-      setIsVisible(true);
-    });
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(element);
+        }
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      }
+    );
 
     observer.observe(element);
 
     return () => {
-      observerCallbacks.delete(element);
-      observer.unobserve(element);
+      observer.disconnect();
     };
   }, []);
 
   return (
     <div
       ref={elementRef}
-      className={`transform-gpu transition-[opacity,transform] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+      className={`transform-gpu transition-[opacity,transform] duration-[1100ms] ease-[cubic-bezier(0.16,1,0.3,1)] ${
         isVisible
           ? 'opacity-100 translate-y-0'
-          : 'opacity-0 translate-y-7 pointer-events-none'
+          : 'opacity-0 pointer-events-none'
       } ${className}`}
       style={{
+        transform: isVisible ? 'translateY(0px)' : `translateY(${distancePx}px)`,
         transitionDelay: `${delayMs}ms`,
         willChange: isVisible ? 'auto' : 'opacity, transform'
       }}
