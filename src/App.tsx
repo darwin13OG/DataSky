@@ -4,6 +4,7 @@ import { Navbar } from './components/Navbar.tsx';
 import { Hero } from './components/Hero.tsx';
 import { ProjectsSection } from './components/ProjectsSection.tsx';
 import { TeamSection } from './components/TeamSection.tsx';
+import { BrandingSection } from './components/BrandingSection.tsx';
 import { FaqSection } from './components/FaqSection.tsx';
 import { ContactSection } from './components/ContactSection.tsx';
 import { Footer } from './components/Footer.tsx';
@@ -29,6 +30,7 @@ function MainLayout() {
         <Hero />
         <ProjectsSection />
         <TeamSection />
+        <BrandingSection />
         <FaqSection />
         <ContactSection />
       </main>

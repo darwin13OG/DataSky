@@ -41,6 +41,12 @@ export const Navbar: React.FC = () => {
               Quiénes somos
             </a>
             <a
+              href="#marca"
+              className="text-[#252321]/80 dark:text-[#FFFDF9]/80 hover:text-[#B0A8A0] dark:hover:text-[#B0A8A0] transition-colors py-1"
+            >
+              Tu marca
+            </a>
+            <a
               href="#faq"
               className="text-[#252321]/80 dark:text-[#FFFDF9]/80 hover:text-[#B0A8A0] dark:hover:text-[#B0A8A0] transition-colors py-1"
             >
@@ -140,6 +146,13 @@ export const Navbar: React.FC = () => {
             className="px-3 py-2 rounded hover:bg-[#B0A8A0]/10 text-[#252321] dark:text-[#FFFDF9]"
           >
             Quiénes somos
+          </a>
+          <a
+            href="#marca"
+            onClick={closeMobileMenu}
+            className="px-3 py-2 rounded hover:bg-[#B0A8A0]/10 text-[#252321] dark:text-[#FFFDF9]"
+          >
+            Tu marca desde cero
           </a>
           <a
             href="#faq"

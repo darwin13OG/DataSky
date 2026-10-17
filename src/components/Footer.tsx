@@ -28,6 +28,9 @@ export const Footer: React.FC = () => {
           <a href="#equipo" className="hover:text-[#B0A8A0] transition-colors">
             Quiénes somos
           </a>
+          <a href="#marca" className="hover:text-[#B0A8A0] transition-colors">
+            Tu marca
+          </a>
           <a href="#faq" className="hover:text-[#B0A8A0] transition-colors">
             Preguntas frecuentes
           </a>
