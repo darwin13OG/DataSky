@@ -29,15 +29,7 @@
   --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
 }
 
-/* Retícula sutil con los nuevos tonos cálidos */
-.bg-grid-light {
-  background-size: 32px 32px;
-  background-image: 
-    linear-gradient(to right, rgba(37, 35, 33, 0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(37, 35, 33, 0.04) 1px, transparent 1px);
-  contain: strict;
-}
-
+/* Modo oscuro: retícula sutil (en modo claro se elimina por completo para un fondo limpio) */
 .bg-grid-dark {
   background-size: 32px 32px;
   background-image: 
@@ -67,6 +59,90 @@
   }
 }
 
+@keyframes borderRotate {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.65;
+    transform: scale(1.05);
+  }
+}
+
+/* Pure Blue Fluid gradient animation for main headline text */
+@keyframes fluidGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Modo claro: azules puros de alto contraste (zafiro, azul real y azul cielo intenso) */
+.text-fluid-gradient {
+  background: linear-gradient(
+    120deg,
+    #1d4ed8 0%,
+    #0284c7 26%,
+    #2563eb 50%,
+    #0369a1 74%,
+    #1d4ed8 100%
+  );
+  background-size: 250% 250%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: fluidGradient 6s ease-in-out infinite;
+}
+
+/* Modo oscuro: azules eléctricos luminosos (azul cielo, azul real y destello hielo) */
+.dark .text-fluid-gradient {
+  background: linear-gradient(
+    120deg,
+    #38bdf8 0%,
+    #3b82f6 26%,
+    #93c5fd 50%,
+    #60a5fa 74%,
+    #38bdf8 100%
+  );
+  background-size: 250% 250%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: fluidGradient 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 8s ease-in-out infinite;
+}
+
+.animate-pulse-glow-delayed {
+  animation: pulseGlow 10s ease-in-out 3s infinite;
+}
+
+.gradient-border-animated {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.08), rgba(6, 182, 212, 0.5), rgba(52, 211, 153, 0.4), rgba(217, 119, 6, 0.4), rgba(255, 255, 255, 0.08));
+  background-size: 300% 100%;
+  animation: borderRotate 6s linear infinite;
+}
+
 .animate-float-up {
   animation: floatUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
@@ -75,13 +151,9 @@
   animation: gentleFloat 4s ease-in-out infinite;
 }
 
-/* Estilos de Lenis para scroll ultra-fluido (escritorio y móvil) */
+/* Estilos de Lenis para scroll ultra-fluido en escritorio */
 html.lenis, html.lenis body {
   height: auto;
-}
-
-html {
-  overscroll-behavior-y: none;
 }
 
 .lenis.lenis-smooth {
@@ -107,12 +179,52 @@ html {
   height: 0px;
 }
 
+@keyframes argonLaser {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.laser-beam-animated {
+  transform: translateZ(0);
+  will-change: transform;
+  animation: argonLaser 4.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
 html, body {
   -ms-overflow-style: none;
   scrollbar-width: none;
   background-color: #FFFDF9;
 }
 
-.dark body {
-  background-color: #252321;
+@keyframes marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
 }
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee:hover,
+.group-marquee:hover .animate-marquee {
+  animation-play-state: paused;
+}
+
+
+

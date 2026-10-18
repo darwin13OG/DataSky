@@ -13,6 +13,7 @@ export interface Project {
   metrics?: string;
   version: string;
   faviconUrl?: string;
+  group?: 'system' | 'web';
 }
 
 export interface Engineer {

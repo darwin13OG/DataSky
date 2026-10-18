@@ -4,21 +4,26 @@ export const FAQS_DATA: FaqItem[] = [
   {
     id: 'faq-1',
     question: '¿Qué pasa si no tengo nombre, logotipo o fotos para mi negocio?',
-    answer: 'No te preocupes. Te ayudamos a crear tu marca desde cero: diseñamos tu logotipo, elegimos tus colores corporativos y organizamos toda la información de tus productos o servicios para que salgas al mercado 100% profesional.'
+    answer: 'Te ayudamos a estructurar tu identidad desde cero: diseñamos tu logotipo, elegimos tu paleta de colores y organizamos la información de tus productos o servicios para que puedas presentarte con claridad.'
   },
   {
     id: 'faq-2',
-    question: '¿Puedo pedir una página web o sistema diferente a los ejemplos que muestran arriba?',
-    answer: '¡Totalmente! Los proyectos mostrados son solo una muestra de nuestras capacidades. Analizamos qué necesita tu negocio y creamos la página web, tienda online o sistema exactamente como tú lo requieras.'
+    question: '¿Cómo funciona el dominio gratis y hay pagos mensuales?',
+    answer: 'Tu sitio web puede funcionar con un dominio gratis .pages.dev sin pagos mensuales obligatorios ni costos de mantenimiento. Si prefieres usar un dominio propio (.com, .co, etc.), lo conectamos directamente a tu nombre.'
   },
   {
     id: 'faq-3',
-    question: '¿Es difícil de usar si no sé mucho de tecnología?',
-    answer: 'Para nada. Lo hacemos tan sencillo que tú o tus empleados pueden usarlo desde el primer día en el celular o computador. Además, te enseñamos paso a paso a manejarlo y te dejamos todo listo para trabajar.'
+    question: '¿Puedo pedir una página web o sistema diferente a los ejemplos del portafolio?',
+    answer: 'Sí. Los proyectos mostrados son demostraciones prácticas de lo que construimos. Conversamos sobre tu idea y desarrollamos la web o tienda adaptada a lo que realmente necesitas.'
   },
   {
     id: 'faq-4',
-    question: '¿Cuánto se demoran en tenerlo listo y a nombre de quién queda?',
-    answer: 'Los tiempos dependen de la complejidad (habitualmente de 3 a 10 días). La página o sistema queda 100% a tu nombre y bajo tu dominio sin letras chiquitas.'
+    question: '¿Es difícil de manejar si no tengo experiencia técnica?',
+    answer: 'Para nada. Diseñamos las plataformas para que tú o tus colaboradores puedan usarlas fácil y directamente desde el celular o computador. Te explicamos su funcionamiento antes de entregarla.'
+  },
+  {
+    id: 'faq-5',
+    question: '¿Cuánto tiempo toma la entrega?',
+    answer: 'Dependiendo de lo que requiera el proyecto, habitualmente toma de 3 a 10 días hábiles. El código y los accesos quedan en tus manos.'
   }
 ];

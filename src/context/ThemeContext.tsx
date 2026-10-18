@@ -10,6 +10,35 @@ interface ThemeContextType {
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
+// Helper to disable transitions during theme change so the browser doesn't freeze
+const disableTransitionsTemporarily = () => {
+  const css = document.createElement('style');
+  css.appendChild(
+    document.createTextNode(
+      `*, *::before, *::after {
+        -webkit-transition: none !important;
+        -moz-transition: none !important;
+        -o-transition: none !important;
+        -ms-transition: none !important;
+        transition: none !important;
+      }`
+    )
+  );
+  document.head.appendChild(css);
+
+  return () => {
+    // Force DOM reflow
+    (() => window.getComputedStyle(document.body))();
+
+    // Remove the style block on the next frame so normal interactions resume
+    requestAnimationFrame(() => {
+      if (document.head.contains(css)) {
+        document.head.removeChild(css);
+      }
+    });
+  };
+};
+
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [theme, setThemeState] = useState<Theme>(() => {
     if (typeof window !== 'undefined') {
@@ -17,14 +46,15 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
       if (stored === 'light' || stored === 'dark') {
         return stored;
       }
-      // Default to dark mode as designed in reference prototype
       return 'dark';
     }
     return 'dark';
   });
 
   useEffect(() => {
+    const enableTransitions = disableTransitionsTemporarily();
     const root = document.documentElement;
+
     if (theme === 'dark') {
       root.classList.add('dark');
       root.classList.remove('light');
@@ -33,6 +63,8 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
       root.classList.add('light');
     }
     localStorage.setItem('datasky_theme', theme);
+
+    enableTransitions();
   }, [theme]);
 
   const toggleTheme = () => {

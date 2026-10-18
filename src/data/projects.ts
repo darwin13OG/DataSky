@@ -8,6 +8,7 @@ export const PROJECTS_DATA: Project[] = [
     url: 'https://scan-pos.pages.dev/',
     category: 'Para Tiendas y Comercios',
     categorySlug: 'retail',
+    group: 'system',
     shortDescription: 'Cobra en el mostrador leyendo códigos de barra y lleva la cuenta de lo que te queda en el negocio sin usar cuadernos ni enredos.',
     fullDescription: 'Sistema fácil para atender clientes rápido en el mostrador: escaneas los productos con la cámara de tu celular o un lector, calcula el cobro al instante y te descuenta el producto del inventario para que sepas qué tienes y qué te falta.',
     techStack: ['Cobro en Caja', 'Lector de Barras', 'Control de Stock'],
@@ -21,31 +22,13 @@ export const PROJECTS_DATA: Project[] = [
     faviconUrl: 'https://scan-pos.pages.dev/favicon.svg'
   },
   {
-    id: 'flickwallet',
-    name: 'FlickWallet',
-    domain: 'flickwallet.pages.dev',
-    url: 'https://flickwallet.pages.dev/',
-    category: 'Para tu Dinero y Ganancias',
-    categorySlug: 'fintech',
-    shortDescription: 'Mira lo que entra, lo que sale y tus ganancias del mes en una sola pantalla limpia y ordenada, sin necesidad de ser contador.',
-    fullDescription: 'Un panel sencillo para tener todas las cuentas de tu negocio al día. Anotas tus ventas, registras lo que pagaste a proveedores y miras de inmediato si tu negocio está ganando plata este mes.',
-    techStack: ['Control de Gastos', 'Ganancias del Mes', 'Historial Limpio'],
-    techStackSummary: 'Saldos al día • Ingresos y salidas • Fácil de entender',
-    highlights: [
-      'Mira tu saldo y tus ganancias reales en tiempo real',
-      'Registra pagos de clientes y gastos a proveedores en un toque',
-      'Todo ordenado para que nunca se te pierda un peso'
-    ],
-    version: 'En línea',
-    faviconUrl: 'https://flickwallet.pages.dev/apple-touch-icon.png'
-  },
-  {
     id: 'cotizador-express',
     name: 'Cotizador Express',
     domain: 'cotizador-expres.pages.dev',
     url: 'https://cotizador-expres.pages.dev',
     category: 'Para Dar Precios a Clientes',
     categorySlug: 'automation',
+    group: 'system',
     shortDescription: 'Dile al cliente cuánto le vale tu trabajo o producto en segundos, con todo sumado y listo para mandar por WhatsApp.',
     fullDescription: 'Calculadora hecha para no perder clientes por demorarse cotizando. Pones los materiales o servicios, calcula tu ganancia automáticamente y te deja la cotización bonita y lista para compartir.',
     techStack: ['Cotizaciones WhatsApp', 'Cálculo de Ganancia', 'Listo para Imprimir'],
@@ -59,12 +42,33 @@ export const PROJECTS_DATA: Project[] = [
     faviconUrl: 'https://cotizador-expres.pages.dev/favicon.png'
   },
   {
+    id: 'flickwallet',
+    name: 'FlickWallet',
+    domain: 'flickwallet.pages.dev',
+    url: 'https://flickwallet.pages.dev/',
+    category: 'Para tu Dinero y Ganancias',
+    categorySlug: 'fintech',
+    group: 'web',
+    shortDescription: 'Mira lo que entra, lo que sale y tus ganancias del mes en una sola pantalla limpia y ordenada, sin necesidad de ser contador.',
+    fullDescription: 'Un panel sencillo para tener todas las cuentas de tu negocio al día. Anotas tus ventas, registras lo que pagaste a proveedores y miras de inmediato si tu negocio está ganando plata este mes.',
+    techStack: ['Control de Gastos', 'Ganancias del Mes', 'Historial Limpio'],
+    techStackSummary: 'Saldos al día • Ingresos y salidas • Fácil de entender',
+    highlights: [
+      'Mira tu saldo y tus ganancias reales en tiempo real',
+      'Registra pagos de clientes y gastos a proveedores en un toque',
+      'Todo ordenado para que nunca se te pierda un peso'
+    ],
+    version: 'En línea',
+    faviconUrl: 'https://flickwallet.pages.dev/apple-touch-icon.png'
+  },
+  {
     id: 'codewave-ai',
     name: 'CodeWave',
     domain: 'code-wave.pages.dev',
     url: 'https://code-wave.pages.dev/',
     category: 'Portafolio de Demos Interactivos',
     categorySlug: 'portfolio',
+    group: 'web',
     shortDescription: 'Sitio web y portafolio interactivo con muestras funcionales de componentes visuales, interfaces dinámicas y experiencias web en vivo.',
     fullDescription: 'Plataforma web y portafolio interactivo desarrollado para exhibir demostraciones en vivo, prototipos de interfaces y experiencias digitales modernas con interacción fluida.',
     techStack: ['Portafolio Web', 'Demos Interactivos', 'UI Moderna'],

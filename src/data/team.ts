@@ -5,31 +5,28 @@ export const ENGINEERS_DATA: Engineer[] = [
     id: 'darwin-alzate',
     number: '01',
     name: 'Darwin Alzate',
-    role: 'Páginas y Tiendas Virtuales',
-    specialty: 'Diseño fácil de usar y ventas online',
-    bio: 'Crea páginas atractivas que se ven perfectas en cualquier celular, cargan al instante y hacen que tus clientes quieran comprarte.',
-    skills: ['Páginas Web', 'Tiendas Online', 'Diseño para Celular'],
-    githubUser: 'darwin13OG'
+    role: 'Técnico en Desarrollo Full Stack',
+    specialty: 'Interfaces web, sistemas y puesta en marcha',
+    bio: 'Desarrolla páginas web y sistemas funcionales, adaptados a celulares y conectados a bases de datos para que operes y vendas por internet.',
+    skills: ['Desarrollo Full Stack', 'Páginas y Tiendas', 'Sistemas Web']
   },
   {
     id: 'jose-posada',
     number: '02',
     name: 'Jose Manuel Posada Muñoz',
-    role: 'Sistemas y Control de Ventas',
-    specialty: 'Caja rápida, inventarios y cuentas claras',
-    bio: 'Arma los sistemas para que cobres en mostrador sin equivocarte, lleves la cuenta de tus productos y sepas cuánto ganaste en el día.',
-    skills: ['Sistemas de Caja', 'Control de Stock', 'Bases de Datos'],
-    githubUser: 'posadaposada'
+    role: 'Técnico en Desarrollo Full Stack',
+    specialty: 'Lógica de negocio, bases de datos y sistemas',
+    bio: 'Desarrolla plataformas y sistemas prácticos, configurados para que lleves el control de ventas, inventarios y cobros sin enredos.',
+    skills: ['Desarrollo Full Stack', 'Páginas y Tiendas', 'Sistemas Web']
   },
   {
     id: 'matyas-garcia',
     number: '03',
     name: 'Matyas García',
-    role: 'Conexión y Funcionamiento 24/7',
-    specialty: 'Sistemas rápidos, seguros y siempre activos',
-    bio: 'Pone tu negocio en internet para que cargue en un segundo en cualquier celular, esté activo las 24 horas y nunca te deje colgado.',
-    skills: ['Velocidad Web', 'En Línea 24/7', 'Seguridad'],
-    githubUser: 'matyas-garcia'
+    role: 'Técnico en Desarrollo Full Stack',
+    specialty: 'Rendimiento, servidores y funcionamiento continuo',
+    bio: 'Desarrolla y despliega soluciones en la nube con carga rápida, bases de datos estables y soporte técnico continuo.',
+    skills: ['Desarrollo Full Stack', 'Páginas y Tiendas', 'Sistemas Web']
   }
 ];
 
