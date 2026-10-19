@@ -9,27 +9,22 @@ export const DomainMicroSection: React.FC = () => {
       <FloatUpReveal delayMs={60} distancePx={28}>
         <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-3 mb-8">
           <div>
-            <div className="text-[11px] font-mono uppercase tracking-widest text-emerald-600 dark:text-emerald-400 font-bold mb-1.5 flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-              <span>Microsección de Dominio</span>
-            </div>
             <h2 className="font-title font-black text-2xl sm:text-3xl uppercase tracking-tight text-zinc-900 dark:text-[#FFFDF9]">
-              Dominio pages.dev gratis
+              Empieza con tu Subdominio{' '}
+              <span className="font-serif italic font-bold normal-case text-emerald-600 dark:text-emerald-400 underline decoration-emerald-500/50 decoration-2 underline-offset-4 tracking-normal inline-block ml-0.5">
+                gratis
+              </span>
             </h2>
             <p className="text-xs sm:text-sm text-zinc-700 dark:text-[#FFFDF9]/80 mt-1 max-w-xl">
-              Sin mensualidades obligatorias. Puedes usar tu enlace gratuito o conectar tu dominio propio:
+              Puedes usar tu enlace gratuito o conectar tu dominio propio:
             </p>
-          </div>
-
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 text-xs font-mono font-semibold uppercase self-start sm:self-auto">
-            <span>Sin pagos mensuales</span>
           </div>
         </div>
       </FloatUpReveal>
 
       {/* Visual 2-Card Comparative Module */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-6">
-        {/* Option 1: Dominio pages.dev Gratis */}
+        {/* Option 1: Subdominio pages.dev Gratis */}
         <FloatUpReveal delayMs={100} distancePx={36}>
           <div className="group relative h-full rounded-2xl border border-emerald-500/40 dark:border-emerald-500/30 bg-white/95 dark:bg-[#1C1A18]/90 backdrop-blur-md p-5 sm:p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500 hover:shadow-[0_0_28px_-5px_rgba(16,185,129,0.22)] overflow-hidden">
             {/* Top Laser Accent */}
@@ -40,7 +35,7 @@ export const DomainMicroSection: React.FC = () => {
               <div className="flex items-center justify-between gap-2 mb-3">
                 <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-md text-[10px] font-mono font-bold uppercase tracking-wider bg-emerald-500/15 border border-emerald-500/35 text-emerald-800 dark:text-emerald-300">
                   <span>✓</span>
-                  <span>Opción Gratis</span>
+                  <span>Subdominio Gratis</span>
                 </span>
                 <span className="text-[10px] font-mono font-bold text-emerald-600 dark:text-emerald-400">
                   $0 / mes
@@ -55,7 +50,7 @@ export const DomainMicroSection: React.FC = () => {
               </div>
 
               <h3 className="font-title font-bold text-lg uppercase tracking-tight text-zinc-900 dark:text-[#FFFDF9] mb-2">
-                Dominio .pages.dev
+                Subdominio .pages.dev
               </h3>
 
               {/* Clean Checklist without dense walls of text */}
@@ -81,7 +76,7 @@ export const DomainMicroSection: React.FC = () => {
 
             <div className="pt-4 mt-4 border-t border-zinc-200/80 dark:border-white/10 flex items-center justify-between text-[11px] font-mono text-zinc-600 dark:text-[#FFFDF9]/70">
               <span>Para empezar hoy</span>
-              <span className="text-emerald-600 dark:text-emerald-400 font-bold">100% Funcional</span>
+              <span className="text-emerald-600 dark:text-emerald-400 font-bold">Totalmente funcional</span>
             </div>
           </div>
         </FloatUpReveal>

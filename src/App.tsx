@@ -3,7 +3,6 @@ import { ThemeProvider } from './context/ThemeContext.tsx';
 import { Navbar } from './components/Navbar.tsx';
 import { Hero } from './components/Hero.tsx';
 import { ProjectsSection } from './components/ProjectsSection.tsx';
-import { DomainMicroSection } from './components/DomainMicroSection.tsx';
 import { TeamSection } from './components/TeamSection.tsx';
 import { BrandingSection } from './components/BrandingSection.tsx';
 import { FaqSection } from './components/FaqSection.tsx';
@@ -60,7 +59,6 @@ function MainLayout() {
         <Hero />
         <MarqueeTicker />
         <ProjectsSection />
-        <DomainMicroSection />
         <TeamSection />
         <BrandingSection />
         <FaqSection />

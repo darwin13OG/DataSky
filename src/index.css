@@ -27,6 +27,7 @@
   --font-title: 'Space Grotesk', sans-serif;
   --font-body: 'Inter', sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  --font-serif: 'Playfair Display', Georgia, serif;
 }
 
 /* Modo oscuro: retícula sutil (en modo claro se elimina por completo para un fondo limpio) */

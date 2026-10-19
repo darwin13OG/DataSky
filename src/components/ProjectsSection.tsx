@@ -240,7 +240,7 @@ export const ProjectsSection: React.FC = () => {
               ¿Tu negocio necesita algo adaptado a tu medida?
             </h3>
             <p className="text-xs text-zinc-700 dark:text-[#FFFDF9]/80 mt-0.5 max-w-xl">
-              Creamos tu tienda virtual, catálogo web con WhatsApp o sistema de control a tu medida exacta. Sin mensualidades obligadas.
+              Creamos tu tienda virtual, catálogo web con WhatsApp o sistema de control a tu medida exacta.
             </p>
           </div>
 

@@ -1,7 +1,7 @@
 import React from 'react';
 
 const TICKER_ITEMS = [
-  { text: 'Dominio gratis .pages.dev sin mensualidades o tu dominio propio', highlight: true },
+  { text: 'Subdominio gratis .pages.dev sin mensualidades o tu dominio propio', highlight: true },
   { text: 'Optimizado para celular', highlight: false },
   { text: 'Entrega en pocos días', highlight: true },
   { text: 'Atención directa con Darwin, Jose y Matyas', highlight: false },

@@ -8,8 +8,8 @@ export const FAQS_DATA: FaqItem[] = [
   },
   {
     id: 'faq-2',
-    question: '¿Cómo funciona el dominio gratis y hay pagos mensuales?',
-    answer: 'Tu sitio web puede funcionar con un dominio gratis .pages.dev sin pagos mensuales obligatorios ni costos de mantenimiento. Si prefieres usar un dominio propio (.com, .co, etc.), lo conectamos directamente a tu nombre.'
+    question: '¿Cómo funciona el dominio gratis y mi propio dominio?',
+    answer: 'Tu sitio web puede funcionar con un dominio gratis .pages.dev o si prefieres usar un dominio propio (.com, .co, etc.), lo conectamos directamente a tu nombre.'
   },
   {
     id: 'faq-3',

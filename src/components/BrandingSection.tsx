@@ -65,7 +65,7 @@ const BRAND_STEPS: BrandStep[] = [
     subtitle: 'Paso 03',
     title: 'Lanzamiento Web',
     description: 'Montamos tu página web o catálogo en línea con tu marca aplicada, lista para que compartas tu enlace por WhatsApp y comiences a atender clientes.',
-    deliverables: ['Página web o catálogo funcionando', 'Sin pagos mensuales obligatorios', 'Enlace listo para compartir y atender'],
+    deliverables: ['Página web o catálogo funcionando', 'Diseño para celular y computador', 'Enlace listo para compartir y atender'],
     highlight: 'Listo para salir al aire',
     themeColor: {
       cardBorder: 'border-emerald-500/45 dark:border-emerald-400/35 shadow-[0_0_22px_-5px_rgba(16,185,129,0.18)] dark:shadow-[0_0_25px_-5px_rgba(16,185,129,0.22)] hover:border-emerald-500',
