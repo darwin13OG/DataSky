@@ -11,7 +11,7 @@ export const DomainMicroSection: React.FC = () => {
           <div>
             <h2 className="font-title font-black text-2xl sm:text-3xl uppercase tracking-tight text-zinc-900 dark:text-[#FFFDF9]">
               Empieza con tu Subdominio{' '}
-              <span className="font-serif italic font-bold normal-case text-emerald-600 dark:text-emerald-400 underline decoration-emerald-500/50 decoration-2 underline-offset-4 tracking-normal inline-block ml-0.5">
+              <span className="text-emerald-600 dark:text-emerald-400">
                 gratis
               </span>
             </h2>
