@@ -29,6 +29,19 @@
   --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
 }
 
+/* Base HTML & Body backgrounds to cover overscroll and gesture bar */
+html, body {
+  background-color: #FFFDF9;
+  color: #252321;
+  min-height: 100%;
+  overscroll-behavior-y: none;
+}
+
+html.dark, html.dark body {
+  background-color: #181615;
+  color: #FFFDF9;
+}
+
 /* Modo oscuro: retícula sutil (en modo claro se elimina por completo para un fondo limpio) */
 .bg-grid-dark {
   background-size: 32px 32px;

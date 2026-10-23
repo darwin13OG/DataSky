@@ -10,7 +10,6 @@ import { FloatUpReveal } from './FloatUpReveal.tsx';
 export const ProjectsSection: React.FC = () => {
   const [activeModalProject, setActiveModalProject] = useState<Project | null>(null);
   const [copiedId, setCopiedId] = useState<string | null>(null);
-  const [selectedFilter, setSelectedFilter] = useState<'all' | 'system' | 'web'>('all');
 
   const handleCopyUrl = (projectId: string, url: string) => {
     navigator.clipboard.writeText(url);
@@ -20,17 +19,11 @@ export const ProjectsSection: React.FC = () => {
     }, 2200);
   };
 
-  const filteredProjects = PROJECTS_DATA.filter((project) => {
-    if (selectedFilter === 'system') return project.group === 'system';
-    if (selectedFilter === 'web') return project.group === 'web';
-    return true;
-  });
-
   return (
     <section id="proyectos" className="py-14 sm:py-16 border-t border-zinc-200 dark:border-white/10 relative">
       {/* Section Header without glowing dots */}
       <FloatUpReveal delayMs={60} distancePx={30}>
-        <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-3 mb-6">
+        <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-3 mb-8">
           <div>
             <div className="text-[11px] font-mono uppercase tracking-widest text-cyan-600 dark:text-cyan-400 font-bold mb-1.5">
               Portafolio de Trabajo
@@ -43,48 +36,11 @@ export const ProjectsSection: React.FC = () => {
             </p>
           </div>
         </div>
-
-        {/* Clean Filter Pills without glowing dots */}
-        <div className="flex flex-wrap items-center gap-2 mb-8 select-none">
-          <button
-            type="button"
-            onClick={() => setSelectedFilter('all')}
-            className={`px-3 py-1.5 rounded-lg text-xs font-mono font-medium transition-all cursor-pointer ${
-              selectedFilter === 'all'
-                ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 shadow-xs'
-                : 'bg-zinc-100 dark:bg-white/5 text-zinc-600 dark:text-[#FFFDF9]/70 hover:bg-zinc-200/80 dark:hover:bg-white/10'
-            }`}
-          >
-            Todos (4)
-          </button>
-          <button
-            type="button"
-            onClick={() => setSelectedFilter('system')}
-            className={`px-3 py-1.5 rounded-lg text-xs font-mono font-medium transition-all cursor-pointer ${
-              selectedFilter === 'system'
-                ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 shadow-xs'
-                : 'bg-zinc-100 dark:bg-white/5 text-zinc-600 dark:text-[#FFFDF9]/70 hover:bg-zinc-200/80 dark:hover:bg-white/10'
-            }`}
-          >
-            Sistemas de Gestión (2)
-          </button>
-          <button
-            type="button"
-            onClick={() => setSelectedFilter('web')}
-            className={`px-3 py-1.5 rounded-lg text-xs font-mono font-medium transition-all cursor-pointer ${
-              selectedFilter === 'web'
-                ? 'bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 shadow-xs'
-                : 'bg-zinc-100 dark:bg-white/5 text-zinc-600 dark:text-[#FFFDF9]/70 hover:bg-zinc-200/80 dark:hover:bg-white/10'
-            }`}
-          >
-            Plataformas Web (2)
-          </button>
-        </div>
       </FloatUpReveal>
 
       {/* Projects Showcase with Browser Mockup Header & Vector Copy Button */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 mb-8">
-        {filteredProjects.map((project, index) => {
+        {PROJECTS_DATA.map((project, index) => {
           const displayIndex = String(index + 1).padStart(2, '0');
           const isCopied = copiedId === project.id;
 
@@ -240,7 +196,7 @@ export const ProjectsSection: React.FC = () => {
               ¿Tu negocio necesita algo adaptado a tu medida?
             </h3>
             <p className="text-xs text-zinc-700 dark:text-[#FFFDF9]/80 mt-0.5 max-w-xl">
-              Creamos tu tienda virtual, catálogo web con WhatsApp o sistema de control a tu medida exacta.
+              Creamos tu tienda virtual, catálogo web con WhatsApp o sistema de control a tu medida exacta. Sin mensualidades obligadas.
             </p>
           </div>
 

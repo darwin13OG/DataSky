@@ -64,6 +64,12 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     }
     localStorage.setItem('datasky_theme', theme);
 
+    // Sync browser UI and mobile navigation bar theme color
+    const metaThemeColor = document.querySelector('meta[name="theme-color"]');
+    if (metaThemeColor) {
+      metaThemeColor.setAttribute('content', theme === 'dark' ? '#181615' : '#FFFDF9');
+    }
+
     enableTransitions();
   }, [theme]);
 

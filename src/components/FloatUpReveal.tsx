@@ -13,20 +13,10 @@ export const FloatUpReveal: React.FC<FloatUpRevealProps> = ({
   className = '',
   distancePx = 28
 }) => {
-  // On mobile touch devices, initialize as visible immediately to eliminate all scroll jank / tirones
-  const [isVisible, setIsVisible] = useState(() => {
-    if (typeof window !== 'undefined') {
-      const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-      if (isTouch) return true;
-    }
-    return false;
-  });
-
+  const [isVisible, setIsVisible] = useState(false);
   const elementRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (isVisible) return;
-
     const element = elementRef.current;
     if (!element) return;
 
@@ -44,7 +34,7 @@ export const FloatUpReveal: React.FC<FloatUpRevealProps> = ({
       },
       {
         threshold: 0.05,
-        rootMargin: '100px 0px 100px 0px' // Pre-reveal before crossing boundary
+        rootMargin: '40px 0px -20px 0px'
       }
     );
 
@@ -53,12 +43,12 @@ export const FloatUpReveal: React.FC<FloatUpRevealProps> = ({
     return () => {
       observer.disconnect();
     };
-  }, [isVisible]);
+  }, []);
 
   return (
     <div
       ref={elementRef}
-      className={`transform-gpu transition-[opacity,transform] duration-[800ms] ease-[cubic-bezier(0.16,1,0.3,1)] ${
+      className={`transform-gpu transition-[opacity,transform] duration-[750ms] ease-[cubic-bezier(0.16,1,0.3,1)] ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 pointer-events-none'
       } ${className}`}
       style={{

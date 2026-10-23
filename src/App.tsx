@@ -19,7 +19,7 @@ function MainLayout() {
   useLenisScroll();
 
   return (
-    <div className="relative min-h-screen bg-[#FFFDF9] text-[#252321] dark:bg-[#181615] dark:text-[#FFFDF9] font-body antialiased flex flex-col selection:bg-cyan-500/30 selection:text-[#252321] dark:selection:text-[#FFFDF9] overflow-x-hidden">
+    <div className="relative min-h-screen bg-[#FFFDF9] text-[#252321] dark:bg-[#181615] dark:text-[#FFFDF9] font-body antialiased flex flex-col selection:bg-cyan-500/30 selection:text-[#252321] dark:selection:text-[#FFFDF9] overflow-x-hidden pb-[env(safe-area-inset-bottom)]">
       {/* Retícula solo en modo oscuro (en blanco modo claro se elimina por completo para un lienzo limpio) */}
       <div className="pointer-events-none fixed inset-0 z-0 hidden dark:block dark:bg-grid-dark transform-gpu" />
 
